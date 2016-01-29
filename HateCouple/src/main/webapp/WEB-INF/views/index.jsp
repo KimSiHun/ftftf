@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	나도 되나?
 	<!-- window1 -->
 	<div id="window"> <!-- 첫 화면 -->
 		<div id="logo">로고</div>
