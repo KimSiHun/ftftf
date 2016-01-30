@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	나는 자연인이다
+	1/30 12:30
 </body>
 </html>
