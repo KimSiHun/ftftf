@@ -1,26 +1,48 @@
 
--- 1. ì˜í™”ê´€ ë¶„ë¥˜
--- ì˜í™”ê´€ ë²ˆí˜¸ ex) 1 cgv 2 ë©”ê°€ë°•ìŠ¤ 3 ë¡¯ë°ì‹œë„¤ë§ˆ PK 
--- ì˜í™”ê´€ ì´ë¦„ ex) cgv ë©”ê°€ë°•ìŠ¤ ë¡¯ë°ì‹œë„¤ë§ˆ
+-- 1: CGV 2:Lotte 3: MegaBox
+
 create table cineInfo(
 c_no number(2) primary key,
 c_name varchar2(12 char) not null
 );
 
--- 2. ì˜í™”ê´€ë³„ ìƒì˜ ì˜í™”
--- ì˜í™”ê´€ ì´ë¦„  - 1ì˜ ì´ë¦„ê³¼ join
--- ì˜í™”ê´€ ì§€ì ëª… - í•´ë‹¹ ì¥ì†Œ ì˜í™”ê´€ ì´ë¦„
--- ì§€ì  í™ˆí˜ì´ì§€ url
--- ìƒì˜ì˜í™” ê·¸ë¦¼
--- ìƒì˜ì˜í™” ì´ë¦„ - í•´ë‹¹ ì§€ì ì—ì„œ ìƒì˜í•˜ëŠ” ì˜í™”ì´ë¦„
--- ì‹œê°„
--- ë¹ˆì¢Œì„ ìˆ˜
+
+
+
+-- c_name ¿µÈ­°ü ÀÌ¸§
+-- c_cine_location ¿µÈ­°ü À§Ä¡ (ex: ¼ö¿ø, ¸ñµ¿, ÄÚ¿¢½º)
+-- c_date »ó¿µ³¯Â¥ (ex: 1/30, 2/1)
+-- c_room_no  (ex: 2°ü,3°ü)
+-- c_current_time ÇöÀç ½Ã°£
+-- c_moive_title ¿µÈ­ Á¦¸ñ
+-- c_begin_time ½ÃÀÛ½Ã°£ 
+-- c_runtime  »ó¿µ½Ã°£
+-- c_clearSeat  ºóÁÂ¼®
+-- c_poster_img Æ÷½ºÅÍ ÀÌ¹ÌÁö
+
 create table cineList(
+c_moive_title varchar2(30 char) not null,
 c_name varchar2(12 char) not null,
-c_pointName varchar2(14 char) not null,
-c_url varchar2(50 char) not null,
-c_img varchar2(400 char) not null,
-c_proName varchar2(20 char) not null,
-c_time Date not null,
-c_clearChair number(4) not null
+c_cine_location varchar2(20 char) not null,
+c_date varchar2(30 char) not null,
+c_room_no varchar2(10 char) not null,
+c_current_time Date not null,
+c_begin_time varchar2(5 char) not null, 
+c_runtime number (4) not null,
+c_clearSeat number (4) not null,
+c_poster_img varchar2(1000 char) not null 
 );
+
+drop table cineList;
+
+select * from cineinfo;
+
+insert into cineinfo values(3, 'MegaBox');
+
+select * from CINELIST;
+
+insert into CINELIST values ('ºò¼îÆ®', 'MegaBox', 'ÄÚ¿¢½º', '1/30', 'M°ü', sysdate, '22:20', 120, 77,'http://movie.phinf.naver.net/20160121_2/14533409853749GqxA_JPEG/movie_image.jpg');
+
+
+
+
