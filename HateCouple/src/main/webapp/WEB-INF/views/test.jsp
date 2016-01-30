@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	실험용입니다다다다다다dkdkdkdkdkdkdkdkdkdkdkdkdkdk
+	나는 자연인이다
 </body>
 </html>
