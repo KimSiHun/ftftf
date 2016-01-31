@@ -31,9 +31,9 @@
 	<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<beans:property name="url"
-			value="jdbc:oracle:thin:@192.168.0.9:1521:xe" />
-		<beans:property name="username" value="suser" />
-		<beans:property name="password" value="suser" />
+			value="jdbc:oracle:thin:@128.199.228.10:1521:xe" />
+		<beans:property name="username" value="kim01" />
+		<beans:property name="password" value="kim01" />
 	</beans:bean>
 	<beans:bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
