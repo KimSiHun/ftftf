@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,10 +81,7 @@ $(document).ready(function(){
 #logo {
     height: 100px;
     width: 300px;
-    margin-left: auto;
-    margin-right:auto;
-    margin-top:auto;
-    margin-bottom: auto;
+    margin : auto;
     color: #ffffff;
     text-align: center;
     background-color: #000000;
@@ -92,15 +91,16 @@ $(document).ready(function(){
 </head>
 <body style="overflow:hidden;">
  
-<div id="fst"><div id="logo"><h1>로고</h1><button id="go">검색</button></div>
+<div id="fst"><div id="logo"><h1>로고</h1><div>
+<input id="search_addr"><button id="go">검색</button></div></div>
 </div>
 
 <div id="snd_content">
 <div id="snd_bar">
 	<div id="bar_location"><h3>경기도 수원시 장안구<button id="back">지역 재설정</button></h3></div>
-	<div id="bar_weather"><h3>2016ë년 2월 1일 09:07 -7 미세먼지 농도 옅음</h3> </div>
+	<div id="bar_weather"><h3>2016년 2월 1일 09:07 -7 미세먼지 농도 옅음</h3> </div>
 </div>
-<h1>ë´ì©</h1>
+<h1>내용</h1>
 </div>
 </body>
 </html>
