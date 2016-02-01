@@ -1,35 +1,106 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script> 
+$(document).on("mousewheel.disableScroll DOMMouseScroll.disableScroll touchmove.disableScroll", function(e) {
+    e.preventDefault();
+    return;
+});
+$(document).on("keydown.disableScroll", function(e) {
+    var eventKeyArray = [32, 33, 34, 35, 36, 37, 38, 39, 40];
+    for (var i = 0; i < eventKeyArray.length; i++) {
+        if (e.keyCode === eventKeyArray [i]) {
+            e.preventDefault();
+            return;
+        }
+    }
+});
+$(document).ready(function(){
+    $("#go").click(function(){
+        $("#fst").slideUp("slow");
+    });
+    $("#back").click(function(){
+        $("#fst").slideDown("slow");
+    });
+});
+</script>
+<style> 
+
+#fst {
+	width:100%;
+    height: 930px;
+    margin: 5px 0px 15px 0px;
+    text-align: center;
+    color: #000000;
+    background-color: #ffffff;
+    border: solid 2px #c3c3c3;
+}
+
+#snd_bar {
+    width:100%;
+    height: 50px;
+	margin: 0px 0px 0px 0px;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    border-bottom: solid 2px #c3c3c3;
+}
+
+#snd_content {
+    width:100%;
+    height: 930px;
+    margin: 10px 0px 15px 0	px;
+    text-align: center;
+    background-color: #ffffff;
+    border: solid 2px #c3c3c3;
+}
+
+#bar_location {
+    height: 40px;
+	margin-top:  auto;
+	margin-bottom: auto;
+	margin-left: 10px;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    float: left;
+}
+
+#bar_weather {
+    height: 40px;
+	margin-right: 10px;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    float: right;
+}
+
+#logo {
+    height: 100px;
+    width: 300px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom: auto;
+    color: #ffffff;
+    text-align: center;
+    background-color: #000000;
+    border: solid 2px #c3c3c3;
+}
+</style>
 </head>
-<body>
+<body style="overflow:hidden;">
+ 
+<div id="fst"><div id="logo"><h1>로고</h1><button id="go">검색</button></div>
+</div>
 
-	<!-- window1 -->
-	<div id="window"> <!-- 첫 화면 -->
-		<div id="logo">로고</div>
-		<div id="searchFirst">검색바</div>
-	</div>
-
-	<!-- window2 -->
-	<div id="window2"> <!-- 두번째 화면 -->
-		<div id="mainBar"> <!-- 상단 고정바 -->
-			<div id="searchResultBar">검색결과바</div>
-			<div id="weatherBar">날씨바</div>
-		</div>
-		<div id="content">
-			<div id="cinema"><!-- 왼쪽화면 -->
-				<div id="cinema-role">영화이미지돌아가는곳</div>
-				<div id="cinema-list">해당 정보 리스트</div>
-			</div>
-			<div id="info"><!-- 오른쪽화면 -->
-				<div id="map">지도</div>
-				<div id="list">맛집리스트</div>
-			</div>
-		</div>
-	</div>
+<div id="snd_content">
+<div id="snd_bar">
+	<div id="bar_location"><h3>경기도 수원시 장안구<button id="back">지역 재설정</button></h3></div>
+	<div id="bar_weather"><h3>2016ë년 2월 1일 09:07 -7 미세먼지 농도 옅음</h3> </div>
+</div>
+<h1>ë´ì©</h1>
+</div>
 </body>
 </html>
