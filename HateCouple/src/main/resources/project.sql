@@ -8,7 +8,7 @@ c_name varchar2(12 char) not null
 
 
 
-
+-- c_movie_title
 -- c_name 영화관 이름
 -- c_cine_location 영화관 위치 (ex: 수원, 목동, 코엑스)
 -- c_date 상영날짜 (ex: 1/30, 2/1)
@@ -21,7 +21,7 @@ c_name varchar2(12 char) not null
 -- c_poster_img 포스터 이미지
 
 create table cineList(
-c_moive_title varchar2(30 char) not null,
+c_movie_title varchar2(30 char) not null,
 c_name varchar2(12 char) not null,
 c_cine_location varchar2(20 char) not null,
 c_date varchar2(30 char) not null,

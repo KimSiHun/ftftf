@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class Movie {
-	private String c_moive_title;
+	private String c_movie_title;
 	private String c_name;
 	private String c_cine_location;
 	private String c_date;
@@ -14,16 +14,16 @@ public class Movie {
 	private BigDecimal c_runtime;
 	private BigDecimal c_clearSeat;
 	private String c_poster_img;
-
+	
 	public Movie() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Movie(String c_moive_title, String c_name, String c_cine_location, String c_date, String c_room_no,
+	public Movie(String c_movie_title, String c_name, String c_cine_location, String c_date, String c_room_no,
 			Date c_current_time, String c_begin_time, BigDecimal c_runtime, BigDecimal c_clearSeat,
 			String c_poster_img) {
 		super();
-		this.c_moive_title = c_moive_title;
+		this.c_movie_title = c_movie_title;
 		this.c_name = c_name;
 		this.c_cine_location = c_cine_location;
 		this.c_date = c_date;
@@ -35,12 +35,12 @@ public class Movie {
 		this.c_poster_img = c_poster_img;
 	}
 
-	public String getC_moive_title() {
-		return c_moive_title;
+	public String getC_movie_title() {
+		return c_movie_title;
 	}
 
-	public void setC_moive_title(String c_moive_title) {
-		this.c_moive_title = c_moive_title;
+	public void setC_movie_title(String c_movie_title) {
+		this.c_movie_title = c_movie_title;
 	}
 
 	public String getC_name() {
@@ -114,5 +114,7 @@ public class Movie {
 	public void setC_poster_img(String c_poster_img) {
 		this.c_poster_img = c_poster_img;
 	}
+	
+	
 
 }
