@@ -144,8 +144,8 @@ $(document).ready(function(){
 
 <div id="snd_content">
 	<div id="snd_bar">
-		<div id="bar_location"><h3>경기도 수원시 장안구<button id="back">지역 재설정</button></h3></div>
-		<div id="bar_weather"><h3>2016년 2월 1일 09:07 -7 미세먼지 농도 옅음</h3> </div>
+		<div id="bar_location"><h3><button id="back">지역 재설정</button></h3></div>
+		<div id="bar_weather"><h3>2016년 2월 1일 09:07 -7 미세먼지 농도 옅음</h3></div>
 	</div>
 	<h1>내용</h1>
 </div>
