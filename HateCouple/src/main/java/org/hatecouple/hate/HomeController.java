@@ -21,14 +21,14 @@ public class HomeController {
 		return "index";
 	}
 	
-	// "getMV" 영화 전체 정보를 가져오는 주소
+	// "getMV": to get whole movieList as JSON 
 	@RequestMapping(value = "/getMV", method = RequestMethod.GET)
 	public @ResponseBody Movies getMovie() {
 	
 		return d.getMovie();
 	}
 	
-	// slide바 테스트를 위한 임시 메소드 입니다.
+	//  temporary method for slide_area
 	@RequestMapping(value = "/slide", method = RequestMethod.GET)
 	public String slide() {
 	
