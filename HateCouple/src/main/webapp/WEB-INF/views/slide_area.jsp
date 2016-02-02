@@ -10,6 +10,21 @@
 <!-- fotorama.css & fotorama.js. -->
 <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+<script type="text/javascript">
+
+// "getMV"로 영화정보를 json형태로 가져오는 기능
+$(document).ready(function(){
+	$.getJSON("getMV", function(json){
+		// 제대로 JSON객체를 가져오는지 확인
+	alert(JSON.stringify(json));
+	
+	});
+});
+
+
+
+
+</script>
 
 <style type="text/css">
 
