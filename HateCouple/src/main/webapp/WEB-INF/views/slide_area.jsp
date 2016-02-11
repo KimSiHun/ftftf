@@ -4,64 +4,73 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!-- 1. Link to jQuery (1.8 or later), -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
-
-<!-- fotorama.css & fotorama.js. -->
-<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
-<script type="text/javascript">
-
-// "getMV"로 영화정보를 json형태로 가져오는 기능
-$(document).ready(function(){
-	$.getJSON("getMV", function(json){
-		// 제대로 JSON객체를 가져오는지 확인
-	alert(JSON.stringify(json));
-	
-	});
-});
-
-
-
-
-</script>
-
 <style type="text/css">
 
-<!-- 이미지 클릭 시 링크가 가능하게 해주는 css 입니다. -->
-.fotorama__html div,
-.fotorama__html a {
-  display: block;
-  height: 100%;
-  /* Transparent links are not clickable in IE,
-     but non-existent background fixes this.
-    (Put an empty 1×1 image here to avoid
-     errors in console.) */
-  background: url(_.gif);
-}
 
 
 </style>
+
+<!-- 1. Link to jQuery (1.8 or later), -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+
+
+
+
+<script type="text/javascript">
+// "getMV"로 영화정보를 json형태로 가져오는 기능
+
+$(document).ready(function(){	
+
+	
+	
+	$.getJSON("getMV", function(json){
+		// json객체 -> String
+		
+		//alert( JSON.stringify(json)  );
+			
+			 $('#get').click(function(){
+		$.each(json.movies, function(i, mv){
+			
+			
+			
+			var img = $('<img/>').attr('src', mv.c_poster_img).css({'width' : '10%' , 'height' : '10%'});
+			var li = $('<li></li>').append(img);
+			var div = $('<div></div>').append(li);
+			
+			$('ul').append(div);
+			
+			
+			
+			//var msgTd = $("<td></td>").text(m.c_poster_img);
+			//var uTd = $("<td></td>").text(m.c_movie_title);
+			
+			//var dataTr = $("<tr></tr>").prepend(msgTd, uTd);
+			//$("table").prepend(dataTr);
+	
+		});
+		
+	  });
+		
+	});	
+});
+
+
+</script>
 
 <title>Insert title here</title>
 
 </head>
 <body>
+<button id="get">get MV_Poster</button>
 
-<!-- 2. fotorama 슬라이드 이미지 div영역입니다. 아직 샘플 -->
-<div class="fotorama"
- 	data-width="500"  
- 	data-height="300" 
- 	data-nav="thumbs"
- 	data-autoplay ="ture"
- 	data-loop="true"
- 	data-keyboard="true"
- 	>
- 	
- 	<div data-img="http://movie.phinf.naver.net/20151229_126/14513737252567fehq_JPEG/movie_image.jpg"><a href="http://google.com/"></a></div>
-	<div data-img="http://movie.phinf.naver.net/20160121_2/14533409853749GqxA_JPEG/movie_image.jpg"><a href="http://google.com/"></a></div>
+  <ul>
+  <div><li><img src =""></li></div>
+  
+  </ul> 
  
-</div>
+ 
+ 
 
 </body>
 </html>
+
