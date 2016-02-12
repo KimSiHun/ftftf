@@ -1,5 +1,4 @@
 
-
 $(document).ready(function(){
 	
 	  var eleWidth = $(".vis_frame ul li").innerWidth();
