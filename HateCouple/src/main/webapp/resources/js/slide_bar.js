@@ -101,6 +101,7 @@ $(document).ready(function(){
 		
 	 });
 		   $("#Bt").click(function(){
+			   $("#Tb").empty();
 	       $.each(json.movies, function(i, s) {
                
                // td += "<tr><td>"+s.c_name+"</td>";
