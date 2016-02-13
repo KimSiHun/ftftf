@@ -1,4 +1,8 @@
 
+foo = function() {
+	$(".vis_frame_content").append("<h1> append </h1>");
+}
+
 $(document).ready(function(){
 	
 	  var eleWidth = $(".vis_frame ul li").innerWidth();
@@ -85,24 +89,40 @@ $(document).ready(function(){
 		
 		//alert( JSON.stringify(json)  );
 			
-		$('#get').click(function(){	 				 
-				 
+		$('#get').click(function(){				 
 	$.each(json.movies, function(i, mv){		
-		
 		var img = $('<img/>').attr('src', mv.c_poster_img).attr('alt', mv.c_movie_title).css({'width' : '100%' , 'height' : '100%'});
-		
-		var link = $('<a></a>').attr('href',"http://www.google.com").append(img);
-		
+		var link = $('<a></a>').attr('href', "http://www.google.com").append(img);
 		var li = $('<li></li>').append(link);
-		
-		var ul = $('<ul></ul>').append(li);
-		
-		$('.vis_frame').append(ul);			
-	
+		var ul = $('<ul></ul>').append(li);		
+		$('.vis_frame').append(ul);					
+		//$('.vis_frame').append('div').append("<button onclick='foo()'>Click me</button>");
 		});
 		
 	 });
-		
+		   $("#Bt").click(function(){
+	       $.each(json.movies, function(i, s) {
+               
+               // td += "<tr><td>"+s.c_name+"</td>";
+               //    td += "<td>"+s.c_cine_location+"</td>";
+               //     td += "<td>"+s.c_begin_time+"</td>";
+               //   td += "<td>"+s.c_clearSeat+"</td></tr>";
+                
+               var title = $('<td></td>').text(s.c_name);
+               var loc = $('<td></td>').text(s.c_cine_location);
+               var time = $('<td></td>').text(s.c_begin_time);
+               var seat = $('<td></td>').text(s.c_clearSeat);
+               
+               var tr =$('<tr></tr>').append(title, loc, time, seat);
+               
+               $("#Tb").append(tr).css("width","400px");
+              });   		
+		   });
 	});	
 });
+
+
+
+   
+   
 

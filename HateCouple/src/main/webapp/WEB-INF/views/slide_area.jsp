@@ -34,11 +34,21 @@
             src="resources\images\right.gif" alt="다음 배너이미지" /></a>
       </div>
       <div id="pos"></div>
+      
+       <div>
+      <Button id="Bt">영화정보</Button>
+      <table id="Tb" border="1">
+      </table>
    </div>
-   
+      
+      
+      
+   </div>
+   <div class="vis_frame_content">
+       
+      </div>
  
-   
- 
+
  
  
 
