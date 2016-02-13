@@ -89,7 +89,9 @@ $(document).ready(function(){
 		
 		//alert( JSON.stringify(json)  );
 			
-		$('#get').click(function(){				 
+		$('#get').click(function(){
+			 $(".vis_frame").empty();
+			
 	$.each(json.movies, function(i, mv){		
 		var img = $('<img/>').attr('src', mv.c_poster_img).attr('alt', mv.c_movie_title).css({'width' : '100%' , 'height' : '100%'});
 		var link = $('<a></a>').attr('href', "http://www.google.com").append(img);
@@ -101,6 +103,7 @@ $(document).ready(function(){
 		
 	 });
 		   $("#Bt").click(function(){
+			   $("#Tb").empty();
 	       $.each(json.movies, function(i, s) {
                
                // td += "<tr><td>"+s.c_name+"</td>";
