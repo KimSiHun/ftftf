@@ -5,11 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- link to css -->
-<link rel="stylesheet" href="resources/stylesheets/slide_bar.css" type="text/css">
+<link rel="stylesheet" href="resources/stylesheets/movieMain.css" type="text/css">
 
 <!-- 1. Link to jQuery (1.8 or later), -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
-<script type="text/javascript" src="resources/js/slide_bar.js" ></script>
+<script type="text/javascript" src="resources/js/movieMain.js" ></script>
 
 <title>Insert title here</title>
 

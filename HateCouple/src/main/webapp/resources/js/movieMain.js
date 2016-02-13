@@ -107,9 +107,9 @@ $(document).ready(function(){
 	       $.each(json.movies, function(i, s) {
                
                // td += "<tr><td>"+s.c_name+"</td>";
-               //    td += "<td>"+s.c_cine_location+"</td>";
-               //     td += "<td>"+s.c_begin_time+"</td>";
-               //   td += "<td>"+s.c_clearSeat+"</td></tr>";
+               // td += "<td>"+s.c_cine_location+"</td>";
+               // td += "<td>"+s.c_begin_time+"</td>";
+               // td += "<td>"+s.c_clearSeat+"</td></tr>";
                 
                var title = $('<td></td>').text(s.c_name);
                var loc = $('<td></td>').text(s.c_cine_location);

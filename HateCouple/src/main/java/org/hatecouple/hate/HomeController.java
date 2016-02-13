@@ -29,10 +29,10 @@ public class HomeController {
 	}
 	
 	//  temporary method for slide_area
-	@RequestMapping(value = "/slide", method = RequestMethod.GET)
+	@RequestMapping(value = "/movieMain", method = RequestMethod.GET)
 	public String slide() {
 	
-		return "slide_area";
+		return "movieMain";
 	}
 	
 }
