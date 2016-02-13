@@ -1,0 +1,93 @@
+@CHARSET "UTF-8";
+
+#fst {
+	width: 100%;
+	height: 930px;
+	margin: 5px 0px 15px 0px;
+	text-align: center;
+	color: #000000;
+	background-color: #ffffff;
+	border: solid 2px #c3c3c3;
+}
+
+	#logo {
+		height: 200px;
+		width: 600px;
+		margin: auto;
+		color: #ffffff;
+		text-align: center;
+		background-color: #000000;
+		border: solid 2px #c3c3c3;
+	}
+
+	#searchBox {
+		margin: auto;
+		width: 300px;
+		background-color: #ffffff;
+		border: solid 2px #505050;
+	}
+
+#snd {
+	height: 930px;
+	width: 100%;
+	text-align: center;
+	background-color: #ffffff;
+	border: solid 2px #c3c3c3;
+}
+
+	#snd_bar {
+		width: 100%;
+		height: 50px;
+		margin: 0px 0px 0px 0px;
+		text-align: center;
+		background-color: #ff8080;
+		color: #ffffff;
+		border-bottom: solid 2px #c3c3c3;
+	}
+
+		#bar_location {
+			width: 400px;
+			height: 40px;
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-left: 10px;
+			text-align: center;
+			background-color: #000000;
+			color: #ffffff;
+			float: left;
+		}
+	
+		#bar_weather {
+			height: 40px;
+			margin-right: 10px;
+			text-align: center;
+			background-color: #000000;
+			color: #ffffff;
+			float: right;
+		}
+
+
+
+	#left_content {
+		height: 865px;
+		width: 40%;
+		color: #000000;
+		text-align: center;
+		background-color: #ffffff;
+		border: solid 2px #c3c3c3;
+		float: left;
+	}
+	
+	#right_content {
+		height: 865px;
+		width: 59%;
+		color: #000000;
+		text-align: center;
+		background-color: #ffffff;
+		border: solid 2px #c3c3c3;
+		float: right;
+	}
+
+			#empty {
+				height: 100px;
+			}
