@@ -10,7 +10,6 @@
 <script type="text/javascript" src="resources/js/haein.js" ></script>
 
 <script>
-
 </script>
 
 </head>

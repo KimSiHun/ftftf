@@ -8,7 +8,7 @@
 		
 		// 최초 구역으로 이동 - 기존 주소창 비우기
 		$("#back").click(function() {
-			$("#sample6_address").val("");
+			$("#sample6_address").val(" ");
 			$("#fst").slideDown("slow");
 		});
 	});
