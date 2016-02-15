@@ -7,6 +7,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script type="text/javascript" src="resources/js/index.js" ></script>
+<script type="text/javascript" src="resources/js/haein.js" ></script>
 
 <script>
 
@@ -48,7 +49,17 @@
 			</div>
 		</div>
 		<div id="left_content">왼쪽</div>
-		<div id="right_content">오른쪽</div>
+		<div id="right_content">
+		<div data-role="page">
+		<div data-role="content">
+			<input id="dongName" placeholder="동네 이름"> 
+			<button>검색</button>
+			<hr>
+			<div id="map" style="width:500px;height:400px;"></div>
+			<ul data-role="listview" data-inset="true"></ul>
+		</div>
+	</div>
+		</div>
 	</div>
 </body>
 </html>
