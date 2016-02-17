@@ -53,8 +53,13 @@
 		<div data-role="page">
 		<div data-role="content">
 			 
+		 <span style="display:none;">
 			<input id="dongName" placeholder="동네 이름"> 
-			<button>검색</button>
+		 </span>
+			
+		  
+	
+			
 			
 			<hr>
 			<div id="map" style="width:730px;height:400px;"></div>
