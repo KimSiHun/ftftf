@@ -41,7 +41,7 @@ insert into cineinfo values(3, 'MegaBox');
 
 select * from CINELIST;
 
-insert into CINELIST values ('·¹¹ö³ÍÆ®', 'CGV', '¿Õ½Ê¸®', '2/2', 'Imax', sysdate, '23:00', 158, 99,'http://movie.phinf.naver.net/20151229_126/14513737252567fehq_JPEG/movie_image.jpg');
+insert into CINELIST values ('ÄôÇªÆÒÅÍ3', 'LotteCinema', '±¤±³¾Æ¿ï·¿', '2/13', '3°ü', sysdate, '21:00', 90, 100,'http://movie.phinf.naver.net/20151230_112/1451458570876HklX8_JPEG/movie_image.jpg');
 
 
 
