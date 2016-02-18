@@ -108,9 +108,9 @@ $(document).ready(function(){
 				// posters의 유니크 배열값들을 다시 json형식으로 가공
 				$.each(posters, function (index, value)  
 			                {  
-					 var id = value;	  
+					 var img = value;	  
 				        item = {}
-				        item ["uniquePoster"] = id;		        
+				        item ["uniquePoster"] = img;		        
 				        posterUrl.push(item);		          
 			                });		
 				// json으로 제대로 만들어 졌는지 콘솔에서 확인
