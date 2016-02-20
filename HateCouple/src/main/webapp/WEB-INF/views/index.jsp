@@ -48,7 +48,9 @@
 				</form>
 			</div>
 		</div>
-		<div id="left_content">왼쪽</div>
+		 <div id="left_content">왼쪽
+ 	     	<jsp:include page="movieMain.jsp" />
+		 </div>
 		<div id="right_content">
 		<div data-role="page">
 		<div data-role="content">
@@ -62,7 +64,7 @@
 			
 			
 			<hr>
-			<div id="map" style="width:730px;height:400px;"></div>
+			<div id="map" style="width:99%; height:400px; margin: auto;"></div>
 			<ul data-role="listview" data-inset="true"></ul>
 		</div>
 	</div>
