@@ -27,7 +27,7 @@
 
 			<div id="searchBox">
 				<!--										 유저가 주소검색으로만 입력할 수 있게 readonly사용 -->
-				<input type="text" id="sample6_address" placeholder="주소" readonly="readonly">
+				<input type="text" id="sample6_address" placeholder="주소" >
 				<input type="button" onclick="execDaumPostcode()" value="주소검색"><br>
 				<button id="go">검색</button>
 			</div>

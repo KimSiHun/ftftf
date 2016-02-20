@@ -3,6 +3,8 @@
 		$("#go").click(function() {
 			var addr = document.getElementById('sample6_address').value;
 			document.getElementById('search_addr').value = addr;
+			//var dongaddr = document.getElementById('sample6_address').value;
+			//document.getElementById('dongName').value = addr;
 			var dongaddr = document.getElementById('sample6_address').value;
 			document.getElementById('dongName').value = addr;
 			$("#fst").slideUp("slow");
