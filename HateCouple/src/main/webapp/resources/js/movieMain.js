@@ -48,10 +48,20 @@ $(document).ready(function(){
 		               var link = $('<a></a>').attr('class', "imgfile").append(img);
 		               var pdiv = $('<div class ="poster" style="display:inline;"></div>').append(link);
 		                   $('#slideDiv').append(pdiv);
+		                   
+		                   // 각 요소마다 id 값을 id+숫자(0~x) 식으로 부여할 수 있는 코드
+		                   var $giveImgID = $("#slideDiv img");
+		                   $giveImgID.attr('id', function (index) {
+		                       return 'img' + index;
+		                   });
+		                   
+		                   var $giveaID = $("#slideDiv a");
+		                   $giveaID.attr('id', function (index){
+		                	   return 'link' + index;
+		                   });
 		              // $('#tabs-1').append(pdiv);
 		           		});  
 		            });   
-		            
 		            	// 상단 포스터 클릭 시 하단 테이블에 정보 출력가능하게 하는 클릭 이벤트
 		               $(".imgfile").click(function(){
 		            	   $("#Tb").empty();
