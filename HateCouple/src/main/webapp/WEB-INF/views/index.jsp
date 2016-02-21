@@ -17,40 +17,42 @@
 <body style="overflow: hidden;" onload="realtimeClock()">
 
 	<div id="fst">
-		<div id="empty"></div>
-		<div id="empty"></div>
-		<div id="empty"></div>
+
 		<div id="logo">
 			<h1>로고, 타이틀 들어갈 자리</h1>
 		</div>
-		<div id="empty"></div>
-
-			<div id="searchBox">
-				<!--										 유저가 주소검색으로만 입력할 수 있게 readonly사용 -->
-				<input type="text" id="sample6_address" placeholder="주소" >
-				<input type="button" onclick="execDaumPostcode()" value="주소검색"><br>
-				<button id="go">검색</button>
-			</div>
+		
+		<div id="searchBox">
+			<!--										 유저가 주소검색으로만 입력할 수 있게 readonly사용 -->
+			<input type="text" id="sample6_address" placeholder="주소" >
+			<button id="go">검색</button>
+		</div>
+		
 	</div>
 		
 
 	<div id="snd">
+	
 		<div id="snd_bar">
 			<div id="bar_location">
-					<form name="addrForm">
+				<form name="addrForm">
 					<input id="search_addr" type="text" name="addrInput" size="30"	/>
-					</form>
-					<button id="back">지역 재설정</button>
-			</div>	
+				</form>
+				<button id="back">지역 재설정</button>
+			</div>
+				
 			<div id="bar_weather">
 				<form name="rtcForm">
 					<input type="text" name="rtcInput" size="20" readonly="readonly" />
 				</form>
 			</div>
+			
 		</div>
-		 <div id="left_content">왼쪽
+		
+		<div id="left_content">왼쪽
  	     	<jsp:include page="movieMain.jsp" />
-		 </div>
+		</div>
+		
 		<div id="right_content">
 		<div data-role="page">
 		<div data-role="content">
