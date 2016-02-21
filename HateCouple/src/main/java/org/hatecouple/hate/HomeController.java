@@ -30,6 +30,8 @@ public class HomeController {
 		return d.getMovie();
 	}
 	
+	
+	
 	//  temporary method for slide_area
 	@RequestMapping(value = "/movieMain", method = RequestMethod.GET)
 	public String slide() {
