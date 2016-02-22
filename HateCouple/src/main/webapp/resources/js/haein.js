@@ -27,7 +27,7 @@ $(document).ready(function() {
 					// 지도
 					
 					// 검색쿼리용				
-					var url2="https://apis.daum.net/local/v1/search/keyword.json?apikey=085c621120828d233c8a25e9eee763e8&q&query=영화관&location="+pos+"&radius=5000";
+					var url2="https://apis.daum.net/local/v1/search/keyword.json?apikey=085c621120828d233c8a25e9eee763e8&q&query=영화관&location="+pos+"&radius=20000";
 					$.getJSON(url2+"&callback=?",function(json2){
 		    		   var items2 = json2.channel.item;
 		   			   var imageSrc = "http://i1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
@@ -67,12 +67,12 @@ $(document).ready(function() {
 							$("ul").append(li);
 											
 						});
-						$("ul").listview("refresh");
+						//$("ul").listview("refresh");
 					});
 					
 				});
 				
-				$("ul").listview("refresh");
+				//$("ul").listview("refresh");
 				
 			});
 			
