@@ -1,53 +1,49 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+<title>jQuery UI Tabs - Default functionality</title>
 <!-- link to css -->
 <link rel="stylesheet" href="resources/stylesheets/movieMain.css" type="text/css">
 
-<!-- 1. Link to jQuery (1.8 or later), -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script type="text/javascript" src="resources/js/movieMain.js" ></script>
+<style type="text/css">
+body {
+	font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+	font-size: 62.5%;
+}
+</style>
 
-<title>Insert title here</title>
 
 </head>
 <body>
-<button id="get">get MV_Poster</button> 
-    <div id="wrap">
-      <h1>영화 이미지 슬라이드</h1>
-      <div id="banner">
-         <div class="vis_frame">
-           <!-- 여기에 <ul><li></li></ul> 형태로 포스터이미지 출력되는 div-->       
-         </div>
+<div id = "slideDiv"></div>
+<!-- 
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">18일</a></li>
+			<li><a href="#tabs-2">19일</a></li>
+			<li><a href="#tabs-3">20일</a></li>
+		</ul>
+		<div id="tabs-1">
+			<p> </p>     
       </div>
-      <div id="b_control">
-         <a href="#play" class="play"><img src="resources\images\play.gif"
-            width="11" height="11" alt="재생" /></a> <a href="#stop" class="stop"><img
-            src="resources\images\stop.gif" width="11" height="11" alt="멈춤" /></a>
-      </div>
-      <div id="b_bt">
-         <a href="#left" class="left"><img src="resources\images\left.gif"
-            alt="이전 배너이미지" /></a> <a href="#right" class="right"><img
-            src="resources\images\right.gif" alt="다음 배너이미지" /></a>
-      </div>
-      <div id="pos"></div>
-      
-       <div>
-      <Button id="Bt">영화정보</Button>
-      <table id="Tb" border="1">
-      </table>
-   </div>
-      
-      
-      
-   </div>
-   <div class="vis_frame_content">
-       
-      </div>
- 
+		<div id="tabs-2">
+			<p></p>
+		</div>
+		<div id="tabs-3">
+			<p></p>
+		</div>
+	</div>
+ -->	 
+ <table id = "Tb">
+ </table>
 </body>
 </html>
 
