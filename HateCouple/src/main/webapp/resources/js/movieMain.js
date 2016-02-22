@@ -1,14 +1,5 @@
 $(document).ready(function(){	      
-	      // tabs
-//	$( "#tabs" ).tabs({
-//		beforeLoad: function( event, ui ) {
-//			ui.jqXHR.fail(function() {
-//				ui.panel.html(
-//					"Couldn't load this tab. We'll try to fix this as soon as possible. " +
-//					"If this wouldn't be a demo." );
-//			});
-//		}
-//	});		
+
 		 $.getJSON("getMV", function(json){
 		      // json객체 -> String      
 		      //alert( JSON.stringify(json));		      
@@ -37,13 +28,11 @@ $(document).ready(function(){
 		                         });      
 		            // json으로 제대로 만들어 졌는지 콘솔에서 확인
 		            console.log(JSON.stringify(posterUrl));   
-		           // v=1
+
 		            // posterUrl에서 이미지주소를 슬라이드에 넣어주는 메소드
 		            $.each(posterUrl, function(i, mv){               
 		               var img = $('<img/>').attr('src', mv.uniquePoster).css({'width' : '100px' , 'height' : '100px'});
-		            //   v++
-		             //  str+v;
-		             //  id,'sss'
+		               
 		               $.each(img, function(i, mv){      
 		               var link = $('<a></a>').attr('class', "imgfile").append(img);
 		               var pdiv = $('<div class ="poster" style="display:inline;"></div>').append(link);
@@ -53,27 +42,42 @@ $(document).ready(function(){
 		                   var $giveImgID = $("#slideDiv img");
 		                   $giveImgID.attr('id', function (index) {
 		                       return 'img' + index;
-		                   });
-		                   
+		                   });		                   
 		                   var $giveaID = $("#slideDiv a");
 		                   $giveaID.attr('id', function (index){
 		                	   return 'link' + index;
-		                   });
-		              // $('#tabs-1').append(pdiv);
+		                   });		          
 		           		});  
 		            });   
-		            	// 상단 포스터 클릭 시 하단 테이블에 정보 출력가능하게 하는 클릭 이벤트
-		               $(".imgfile").click(function(){
-		            	   $("#Tb").empty();
-		                $.each(json.movies, function(i, s){	                	
-		                     var title = $('<td></td>').text(s.c_name);
-		                     var loc = $('<td></td>').text(s.c_cine_location);
-		                     var time = $('<td></td>').text(s.c_begin_time);
-		                     var seat = $('<td></td>').text(s.c_clearSeat);		                     
-		                     var tr =$('<tr></tr>').append(title, loc, time, seat);		                     
-		                     $("#Tb").append(tr).css("width","400px");           
-		                    });         
-		               });  
+		            
+		            // 이미지 클릭 시 각 고유 이미지주소를 가져오기 위한 코드
+		            $(function(){
+		                $("img[id^='img'").click(function() {
+		                    var getImgLink =$(this).attr("src");
+		                    
+		                    console.log(getImgLink);
+		                });
+		            });
+
+
+//		            $('[id^=link]','#slideDiv').click(function(){	
+//		            	 alert('click');
+//		            	 $("#Tb").empty();         
+//		            });
+//		            
+		            
+		            // 상단 포스터 클릭 시 하단 테이블에 정보 출력가능하게 하는 클릭 이벤트
+//		               $(".imgfile").click(function(){
+//		            	   $("#Tb").empty();
+//		                $.each(json.movies, function(i, s){	                	
+//		                     var title = $('<td></td>').text(s.c_name);
+//		                     var loc = $('<td></td>').text(s.c_cine_location);
+//		                     var time = $('<td></td>').text(s.c_begin_time);
+//		                     var seat = $('<td></td>').text(s.c_clearSeat);		                     
+//		                     var tr =$('<tr></tr>').append(title, loc, time, seat);		                     
+//		                     $("#Tb").append(tr).css("width","400px");           
+//		                    });         
+//		               });  
 
 		 });
 });		
