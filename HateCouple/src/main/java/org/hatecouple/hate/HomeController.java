@@ -1,12 +1,12 @@
 package org.hatecouple.hate;
 
-import org.hatecouple.hate.bean.Movies;
+import javax.servlet.http.HttpServletRequest;
+
 import org.hatecouple.hate.db.DBDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
@@ -21,11 +21,11 @@ public class HomeController {
 	}
 
 	// "getMV": to get whole movieList as JSON
-	@RequestMapping(value = "/getMV", method = RequestMethod.GET)
-	public @ResponseBody Movies getMovie() {
-
-		return d.getMovie();
-	}
+//	@RequestMapping(value = "/getMV", method = RequestMethod.GET)
+//	public @ResponseBody Movies getMovie() {
+//
+//		return d.getMovie();
+//	}
 
 	// temporary method for slide_area
 	@RequestMapping(value = "/movieMain", method = RequestMethod.GET)
@@ -39,7 +39,21 @@ public class HomeController {
 
 		return "mapAndList";
 	}
+	
+	
+	@RequestMapping(value = "/getAreaDB", method = RequestMethod.GET)
+	public String getAreaDB(HttpServletRequest req) {
+		d.getMovieInArea(req);
+		
+		return "index";
+	}
 
+	
+	
+	
+	
+	
+	
 	// @RequestMapping(value = "/jsonp", method = RequestMethod.GET)
 	// public @ResponseBody String getJSONP(
 	// @RequestParam(value = "callback") String cb){
