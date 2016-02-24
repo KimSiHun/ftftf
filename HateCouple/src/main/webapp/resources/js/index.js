@@ -30,9 +30,13 @@
 						$.each(items2,function(i,it2){
 							
 							// list에 영화관 이름 붙이기. 상위 ul
-							var li = $("<li></li>").append(it2.title);
-							$("ul").append(li);
+							var li = $('<li class = "theaterNameLI"></li>').append(it2.title);
+							$('#theaterNameUL').append(li);
 						});
+						
+						// mapAndList.jsp의 <ul><li></li><ul> 속의 영화관지점명의 값을 빼내기 위한 코드
+						var thName = $('.theaterNameLI').text();
+						console.log(thName);
 					});
 					
 				});
