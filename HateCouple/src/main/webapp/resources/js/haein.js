@@ -37,7 +37,7 @@ $(document).ready(function() {
 //		   			   };
 //		   			   var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
 		   			   
-		   			   var items = [];
+		   			   var cgvList = [];
 		   			   var cgv = "CGV";
 						$.each(items2,function(i,it2){
 													   
@@ -57,9 +57,11 @@ $(document).ready(function() {
 
 							 							
 							if (it2.title.indexOf(cgv) != -1) {
-								items.push(it2.title);
+								cgvList.push(it2.title);
 							}
-							
+							alert(cgvList);
+						
+			
 							
  							var br = $("<br>");
 							var br2 = $("<br>");
