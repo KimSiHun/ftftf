@@ -27,7 +27,7 @@
 		</div>
 
 		<div id="searchBox">
-			<!--										 유저가 주소검색으로만 입력할 수 있게 readonly사용 -->
+			<!-- 유저가 주소검색으로만 입력할 수 있게 readonly사용 -->
 			<input type="text" id="sample6_address" placeholder="주소">
 			<button id="go">검색</button>
 		</div>
@@ -36,7 +36,7 @@
 
 
 	<div id="snd">
-
+	<!-- 2번째 view 상단바 자리 -->
 		<div id="snd_bar">
 			<div id="bar_location">
 				<form name="addrForm">
@@ -50,31 +50,15 @@
 					<input type="text" name="rtcInput" size="20" readonly="readonly" />
 				</form>
 			</div>
-
 		</div>
 
+		<!-- 2번째 view 왼쪽 화면 -->
 		<div id="left_content">
-			왼쪽
 			<jsp:include page="movieMain.jsp" />
 		</div>
-
+		<!-- 2번째 view 오른쪽 화면 -->
 		<div id="right_content">
-			<div data-role="page">
-				<div data-role="content">
-
-					<span style="display: none;"> <input id="dongName"
-						placeholder="동네 이름">
-					</span>
-
-
-
-
-
-					<hr>
-					<div id="map" style="width: 99%; height: 400px; margin: auto;"></div>
-					<ul data-role="listview" data-inset="true"></ul>
-				</div>
-			</div>
+			<jsp:include page="mapAndList.jsp"/>
 		</div>
 	</div>
 </body>

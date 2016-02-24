@@ -2,7 +2,7 @@
 <mapper namespace="org.hatecouple.hate.db.CineMapper">
 	<select id="getMovie" resultType="org.hatecouple.hate.bean.Movie">
 
-		select * from cineList
+		select * from cgvList
 
 	</select>
 
