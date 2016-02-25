@@ -34,9 +34,42 @@
 							$('#theaterNameUL').append(li);
 						});
 						
-						// mapAndList.jsp의 <ul><li></li><ul> 속의 영화관지점명의 값을 빼내기 위한 코드
-						var thName = $('.theaterNameLI').text();
-						console.log(thName);
+						
+						// mapAndList.jsp의 <ul><li></li><ul> 속의 영화관지점명의 값을 빼내고 json객체 생성
+						  thNameJsonObj = [];
+						    $(".theaterNameLI").each(function() {
+
+						        var thName = $(this).text();		      
+						        item = {}
+						        item ["title"] = thName;
+						        
+
+						        thNameJsonObj.push(item);
+						    });
+
+						    console.log(JSON.stringify(thNameJsonObj));
+						
+						
+						
+						
+						
+						
+						
+//						var thName = $('.theaterNameLI').text();
+						
+						
+//						alert(thName);
+//						var thNameList = [];
+//						 $.each(thName, function (index, value)  
+//		                         {  
+//		                var img = value;     
+//		                    item = {}
+//		                    item ["uniquePoster"] = img;              
+//		                    thNameList.push(item);                
+//		                         });      
+//					
+//						 alert(thNameList);
+						
 					});
 					
 				});
@@ -51,6 +84,7 @@
 			$("#fst").slideDown("slow");
 		});
 	});
+	
 	//마우스 스크롤 금지
 	$(document)
 		.on("mousewheel.disableScroll DOMMouseScroll.disableScroll touchmove.disableScroll",
