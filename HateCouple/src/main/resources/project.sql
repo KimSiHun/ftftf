@@ -7,18 +7,20 @@ c_name varchar2(12 char) not null
 );
 
 
+select c_theaterName, c_movieName, c_movieTime, c_clearChair from cgvmovielist where c_theaterName='CGVê°•ë‚¨ì '
+
 
 -- c_movie_title
--- c_name ¿µÈ­°ü ÀÌ¸§
--- c_cine_location ¿µÈ­°ü À§Ä¡ (ex: ¼ö¿ø, ¸ñµ¿, ÄÚ¿¢½º)
--- c_date »ó¿µ³¯Â¥ (ex: 1/30, 2/1)
--- c_room_no  (ex: 2°ü,3°ü)
--- c_current_time ÇöÀç ½Ã°£
--- c_moive_title ¿µÈ­ Á¦¸ñ
--- c_begin_time ½ÃÀÛ½Ã°£ 
--- c_runtime  »ó¿µ½Ã°£
--- c_clearSeat  ºóÁÂ¼®
--- c_poster_img Æ÷½ºÅÍ ÀÌ¹ÌÁö
+-- c_name ï¿½ï¿½È­ï¿½ï¿½ ï¿½Ì¸ï¿½
+-- c_cine_location ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½Ä¡ (ex: ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½, ï¿½Ú¿ï¿½ï¿½ï¿½)
+-- c_date ï¿½ó¿µ³ï¿½Â¥ (ex: 1/30, 2/1)
+-- c_room_no  (ex: 2ï¿½ï¿½,3ï¿½ï¿½)
+-- c_current_time ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
+-- c_moive_title ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½
+-- c_begin_time ï¿½ï¿½ï¿½Û½Ã°ï¿½ 
+-- c_runtime  ï¿½ó¿µ½Ã°ï¿½
+-- c_clearSeat  ï¿½ï¿½ï¿½Â¼ï¿½
+-- c_poster_img ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½
 
 create table cineList(
 c_movie_title varchar2(30 char) not null,
@@ -41,7 +43,7 @@ insert into cineinfo values(3, 'MegaBox');
 
 select * from CINELIST;
 
-insert into CINELIST values ('Ä³·Ñ', 'LotteCinema', '°­³²', '2/14', '5°ü', sysdate, '18:10', 118, 106,'http://movie.phinf.naver.net/20160125_277/1453690119582B8hkE_JPEG/movie_image.jpg');
+insert into CINELIST values ('Ä³ï¿½ï¿½', 'LotteCinema', 'ï¿½ï¿½ï¿½ï¿½', '2/14', '5ï¿½ï¿½', sysdate, '18:10', 118, 106,'http://movie.phinf.naver.net/20160125_277/1453690119582B8hkE_JPEG/movie_image.jpg');
 
 
 
