@@ -35,7 +35,8 @@
 						// mapAndList.jsp의 <ul><li></li><ul> 속의 영화관지점명의 값을 빼내고 json객체 생성
 						  thNameJsonObj = [];						  
 						    $(".theaterNameLI").each(function() {
-						        var thName = $(this).text();		      
+						        var thName = $(this).text();
+						        thName = thName.replace(/\s+/g, '');
 						        item = {}
 						        item ["c_theaterName"] = thName;	
 						        thNameJsonObj.push(item);
