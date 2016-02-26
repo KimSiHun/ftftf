@@ -115,7 +115,15 @@ $(document).ready(function() {
 	                		                        type: "post",
 	                		                        cache: false,
 	                		                        success: function (data, stat, xhr) {
-	                		                            alert(data);
+	                		                        	 $.each(data, function(i, mv){
+	                                                         
+	                                                         var theaterTitle = $("<td></td>").text(mv.c_theaterName);
+	                                                         var movieTitle = $("<td></td>").text(mv.c_movieName);
+	                                                         var movieTime = $("<td></td>").text(mv.c_movieTime);
+	                                                         var clearChair = $("<td></td>").text(mv.c_clearChair);
+	                                                         var tr =$('<tr></tr>').append(theaterTitle,movieTitle,movieTime,clearChair);
+	                                                         $("#Tb").append(tr).css("width","500px");   
+	                                                      });
 	                		                        },
 	                		                        error: function (xhr, stat, err) {
 	                		                        	alert("error");

@@ -17,10 +17,6 @@ $(document).ready(function(){
 });
 
 </script>
-
-
-
-
 <style>
 * {
    margin: 0;
@@ -71,7 +67,7 @@ $(document).ready(function(){
                 <img src="resources/images/right.gif" alt="다음">
             </a>
         </p>
-    
+    <table id ="Tb"></table>
 </body>
 
 </html>
