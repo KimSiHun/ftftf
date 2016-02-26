@@ -6,6 +6,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.hatecouple.hate.bean.ImageAndTitle;
+import org.hatecouple.hate.bean.MovieAreaList;
 import org.hatecouple.hate.bean.TheaterList;
 import org.hatecouple.hate.db.DBDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,14 +51,13 @@ public class HomeController {
 
 	@RequestMapping(value = "/getAreaDB", method = RequestMethod.GET)
 	public String getAreaDB(HttpServletRequest req) {
-		d.getMovieInArea(req);
 
 		return "index";
 	}
 
 	@RequestMapping("/abc")
 	@ResponseBody
-	public String modify(@RequestBody List<Map<String, Object>> list) {
+	public ArrayList<ImageAndTitle> getClientList(@RequestBody List<Map<String, Object>> list) {
 
 		ArrayList<TheaterList> thList = new ArrayList<TheaterList>();
 
@@ -67,13 +68,8 @@ public class HomeController {
 
 			thList.add(th);
 		}
-
-		for (TheaterList theaterList : thList) {
-
-			System.out.println(theaterList.getC_theaterName());
-
-		}
-		return "{}";
+		System.out.println(d.getMovieInArea(thList).get(0).toString());
+		return d.getMovieInArea(thList);
 	}
 
 }
