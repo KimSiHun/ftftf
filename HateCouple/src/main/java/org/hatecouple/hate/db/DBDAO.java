@@ -15,14 +15,6 @@ public class DBDAO {
 
 	@Autowired
 	private SqlSession ss;
-
-//	public Movies getMovie() {
-//
-//		CineMapper cm = ss.getMapper(CineMapper.class);
-//
-//		return new Movies(cm.getMovie());
-//
-//	}
 	
 	public ArrayList<MovieAreaList> getMovieInArea(HttpServletRequest req) {
 		
@@ -40,9 +32,10 @@ public class DBDAO {
 		System.out.println(c_theaterName);
 		CineMapper cm = ss.getMapper(CineMapper.class);
 		
-		// List select 후 리턴
+		// List select 후 리턴 // 예가 for문 추가해서 여러개 골라내는 용입니다.!
 		ArrayList<MovieAreaList> mal = cm.getMovieInArea( new MovieAreaList(c_theaterName, null, null, null));
 		
+		// 테스트용입니다. 어레이 구축후 확인하는 용입니다.
 		for (int i = 0; i < mal.size(); i++) {
 			System.out.println(mal.get(i).getC_theaterName()+" / "+mal.get(i).getC_movieName());
 		}
@@ -50,5 +43,5 @@ public class DBDAO {
 		return mal;
 	}
 	
-
+	
 }
