@@ -29,9 +29,16 @@ $(document).ready(function() {
 						// 해당 json value로 li에 붙이기 . -> 영화관 이름만
 						$.each(items2,function(i,it2){
 							
+							var mapTitle =  it2.title;	
+							// CGV만 빼내기
+					        if ( mapTitle.indexOf('CGV') !== -1 ) {
+					          // 콘솔에 확인
+					        console.log('CGV', mapTitle);  
+					        
 							// list에 영화관 이름 붙이기. 상위 ul
-							var li = $('<li class = "theaterNameLI"></li>').append(it2.title);
+							var li = $('<li class = "theaterNameLI"></li>').append(mapTitle);
 							$('#theaterNameUL').append(li);
+					        }
 						});						
 						
 						// mapAndList.jsp의 <ul><li></li><ul> 속의 영화관지점명의 값을 빼내고 json객체 생성
@@ -41,8 +48,9 @@ $(document).ready(function() {
 						        
 						       // CGV만 빼내기
 						        if ( thName.indexOf('CGV') !== -1 ) {
-						          console.log('CGV', thName);  
-						       // 공백 없애기
+						         // console.log('CGV', thName);  
+						       
+						          // 공백 없애기
 						          thName = thName.replace(/\s+/g, '');
 							        item = {}
 							        item ["c_theaterName"] = thName;	
