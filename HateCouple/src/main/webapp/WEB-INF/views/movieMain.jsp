@@ -63,12 +63,12 @@ $(document).ready(function(){
     </div>
     <p>
             <a href="#" id="prevBtn">
-                <img src="resources/img/left.gif" alt="이전">
+                <img src="resources/images/left.gif" alt="이전">
             </a>
         </p>
         <p>
             <a href="#" id="nextBtn">
-                <img src="resources/img/right.gif" alt="다음">
+                <img src="resources/images/right.gif" alt="다음">
             </a>
         </p>
     

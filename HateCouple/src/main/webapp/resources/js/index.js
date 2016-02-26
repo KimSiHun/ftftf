@@ -1,5 +1,3 @@
-document.write("<script src='./resources/js/jquery.bxslider.js'></script>");
-document.write("<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>");
 
 $(document).ready(function() {
 		//정보표시 구역(두번째)으로 이동
@@ -81,16 +79,39 @@ $(document).ready(function() {
 		                                      posterUrl.push(item);                
 		                              });      
 		                              // json으로 제대로 만들어 졌는지 콘솔에서 확인
-		                              console.log(JSON.stringify(posterUrl));  
+		                             // console.log(JSON.stringify(posterUrl));  
 		                         
 		                              $.each(posterUrl, function(i, mv){ 
 		                                 
 		                                    var img = $('<img/>').attr('src', mv.c_posterName);
-		                                    var linkFirst = $('<a></a>').attr('href', "#").append(img);
-		                                    var spanFirst = $('<span></span>').append(linkFirst);
-		                                    $('#slide_banner').append(spanFirst);
 		                                    
-		                              });
+		                                    $.each(img, function(i, mv){ 
+		                                    var link = $('<a></a>').attr('href', "#").append(img);
+		                                    var span = $('<span></span>').append(link);
+		                                    $('#slide_banner').append(span);
+		                                    
+		                                    // 각각 img 태그에 아이디 부여 img0~xx이런 식으로
+		                                    var $giveImgID = $("#slide_banner img");
+		         		                   $giveImgID.attr('id', function (index) {
+		         		                       return 'img' + index;
+		         		                   });
+		         		                   // 각각 a 태그에 아이디 부여 link0~xx이런 식으로
+		         		                  var $giveaID = $("#slide_banner a");
+		         		                  $giveaID.attr('id', function (index){
+		       		                	   return 'link' + index;
+		       		                   });		          
+		                                    
+		                             });
+		                                    
+		                                    		                		           		                                    
+		                            });
+		                           // 이미지 클릭 시 각 고유 이미지주소를 가져오기 위한 코드
+		                              $(function(){
+	                		                $("img[id^='img'").click(function() {
+	                		                    var getImgLink =$(this).attr("src");	                		                    
+	                		                    console.log(getImgLink);
+	                		                });
+	                		            });
 
 	                                    var mySlider = $( '#slide_banner' ).bxSlider( {
 	                                  	   mode: 'horizontal',// 가로 방향 수평 슬라이드
@@ -125,12 +146,17 @@ $(document).ready(function() {
 							    	console.log(err);
 							    }
 							});
+							
+							
+
 
 					});
 					
 				});
 				
 			});
+			
+			
 			
 		});		
 		// 최초 구역으로 이동 - 기존 주소창 비우기
