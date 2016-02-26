@@ -36,10 +36,16 @@
 						  thNameJsonObj = [];						  
 						    $(".theaterNameLI").each(function() {
 						        var thName = $(this).text();
-						        thName = thName.replace(/\s+/g, '');
-						        item = {}
-						        item ["c_theaterName"] = thName;	
-						        thNameJsonObj.push(item);
+						        
+						       // CGV만 빼내기
+						        if ( thName.indexOf('CGV') !== -1 ) {
+						          console.log('CGV', thName);  
+						       // 공백 없애기
+						          thName = thName.replace(/\s+/g, '');
+							        item = {}
+							        item ["c_theaterName"] = thName;	
+							        thNameJsonObj.push(item);
+						        } 						       
 						    });
 						    console.log(JSON.stringify(thNameJsonObj));					
 						    
