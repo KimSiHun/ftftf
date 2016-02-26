@@ -4,10 +4,8 @@
 			var addr = document.getElementById('sample6_address').value;
 			document.getElementById('search_addr').value = addr;
 			var dongaddr = document.getElementById('sample6_address').value;
-
-			$("#fst").slideUp("slow");
 			
-			
+			$("#fst").slideUp("slow");						
 			
 			var url = "https://apis.daum.net/local/geo/addr2coord?apikey=085c621120828d233c8a25e9eee763e8&q="+addr+"&output=json";
 			// 좌표 구하기
@@ -32,26 +30,36 @@
 							// list에 영화관 이름 붙이기. 상위 ul
 							var li = $('<li class = "theaterNameLI"></li>').append(it2.title);
 							$('#theaterNameUL').append(li);
-						});
-						
+						});						
 						
 						// mapAndList.jsp의 <ul><li></li><ul> 속의 영화관지점명의 값을 빼내고 json객체 생성
-						  thNameJsonObj = [];
+						  thNameJsonObj = [];						  
 						    $(".theaterNameLI").each(function() {
-
 						        var thName = $(this).text();		      
 						        item = {}
-						        item ["title"] = thName;
-						        
-
+						        item ["c_theaterName"] = thName;	
 						        thNameJsonObj.push(item);
 						    });
-
-						    console.log(JSON.stringify(thNameJsonObj));
-						
-						
-						
-						
+						    console.log(JSON.stringify(thNameJsonObj));					
+						    
+						    // thNameJsonObj을 홈컨트롤러로 보내기 위한 ajax 매서드
+							$.ajax({
+								url : 'abc',
+								method : "post", 
+								dataType : 'json',
+								data :JSON.stringify(thNameJsonObj), 
+								processData : true /*querySTring make false*/,
+								contentType : "application/json; charset=UTF-8",
+								success : function(data, stat, xhr) {
+									alert("success");
+								},
+								error : function(xhr, stat, err) {
+							    	alert("error");
+							    	console.log(err);
+							    }
+							});
+//
+//						
 						
 						
 						
@@ -76,15 +84,13 @@
 				
 			});
 			
-		});
-		
+		});		
 		// 최초 구역으로 이동 - 기존 주소창 비우기
 		$("#back").click(function() {
 			$("#sample6_address").val(" ");
 			$("#fst").slideDown("slow");
 		});
-	});
-	
+	});	
 	//마우스 스크롤 금지
 	$(document)
 		.on("mousewheel.disableScroll DOMMouseScroll.disableScroll touchmove.disableScroll",
