@@ -3,7 +3,6 @@ package org.hatecouple.hate.db;
 import java.util.ArrayList;
 
 import org.apache.ibatis.session.SqlSession;
-import org.hatecouple.hate.HomeController;
 import org.hatecouple.hate.bean.ImageAndTitle;
 import org.hatecouple.hate.bean.MovieAreaList;
 import org.hatecouple.hate.bean.TheaterList;
@@ -31,11 +30,6 @@ public class DBDAO {
 			c_theaterName = thlis.getC_theaterName();
 			mal.addAll(cm.selectAreaMovieImg(new MovieAreaList(c_theaterName, null, null, null)));
 		}
-		
-		for (ImageAndTitle imageAndTitle : mal) {
-			System.out.println(imageAndTitle.getC_movieName() + " / "  + imageAndTitle.getC_posterName());
-		}
-		
 		return mal;
 	}
 	

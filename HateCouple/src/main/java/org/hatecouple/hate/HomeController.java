@@ -7,7 +7,6 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.hatecouple.hate.bean.ImageAndTitle;
-import org.hatecouple.hate.bean.MovieAreaList;
 import org.hatecouple.hate.bean.TheaterList;
 import org.hatecouple.hate.db.DBDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,13 +27,6 @@ public class HomeController {
 
 		return "index";
 	}
-
-	// "getMV": to get whole movieList as JSON
-	// @RequestMapping(value = "/getMV", method = RequestMethod.GET)
-	// public @ResponseBody Movies getMovie() {
-	//
-	// return d.getMovie();
-	// }
 
 	// temporary method for slide_area
 	@RequestMapping(value = "/movieMain", method = RequestMethod.GET)
@@ -72,18 +64,3 @@ public class HomeController {
 	}
 
 }
-
-// @RequestMapping(value = "/jsonp", method = RequestMethod.GET)
-// public @ResponseBody String getJSONP(
-// @RequestParam(value = "callback") String cb){
-// try{
-// Movies m = d.getMovie();
-// ObjectMapper om = new ObjectMapper();
-// String res = cb + "(" + new String(om.writeValueAsBytes(m), "8859_1") +
-// ")";
-// return res;
-// } catch(Exception e){
-// e.printStackTrace();
-// return null;
-// }
-// }
