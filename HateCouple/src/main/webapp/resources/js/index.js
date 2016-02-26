@@ -114,7 +114,8 @@ $(document).ready(function() {
 	                		                        data: { 'c_posterName' : getImgLink},
 	                		                        type: "post",
 	                		                        cache: false,
-	                		                        success: function (data, stat, xhr) {
+	                		                        success: function (data, stat, xhr) {                		                        	
+	                		                        	
 	                		                        	 $.each(data, function(i, mv){
 	                                                         
 	                                                         var theaterTitle = $("<td></td>").text(mv.c_theaterName);
@@ -136,9 +137,6 @@ $(document).ready(function() {
 	                		               
 	      		                           });  
 	      		             
-            		 
-	                		       
-		                              
 		                              
 	                                    var mySlider = $( '#slide_banner' ).bxSlider( {
 	                                  	   mode: 'horizontal',// 가로 방향 수평 슬라이드
@@ -185,13 +183,13 @@ $(document).ready(function() {
 			$("#fst").slideDown("slow");
 		});
 	});	
-	//마우스 스크롤 금지
-	$(document)
-		.on("mousewheel.disableScroll DOMMouseScroll.disableScroll touchmove.disableScroll",
-			function(e) {
-				e.preventDefault();
-				return;
-			});
+//	//마우스 스크롤 금지
+//	$(document)
+//		.on("mousewheel.disableScroll DOMMouseScroll.disableScroll touchmove.disableScroll",
+//			function(e) {
+//				e.preventDefault();
+//				return;
+//			});
 	//키보드로 이동 금지
 	$(document).on("keydown.disableScroll", function(e) {
 		var eventKeyArray = [ 32, 33, 34, 35, 36, 37, 38, 39, 40 ];

@@ -4,6 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+
+#theaterNameUL{
+text-align: left;
+
+}
+
+
+
+</style>
 
 <title>Insert title here</title>
 </head>
