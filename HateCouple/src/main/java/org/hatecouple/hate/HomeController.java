@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
-
+	ArrayList<TheaterList> thList = new ArrayList<TheaterList>();
 	@Autowired
 	private DBDAO d;
 
@@ -50,9 +50,7 @@ public class HomeController {
 	@RequestMapping("/abc")
 	@ResponseBody
 	public ArrayList<ImageAndTitle> getClientList(@RequestBody List<Map<String, Object>> list) {
-
-		ArrayList<TheaterList> thList = new ArrayList<TheaterList>();
-
+		
 		for (Map<String, Object> t : list) {
 
 			TheaterList th = new TheaterList();
@@ -62,11 +60,15 @@ public class HomeController {
 		}
 		return d.getMovieInArea(thList);
 	}
-	
+
 	@RequestMapping(value = "/zxcv", method = RequestMethod.POST)
 	public String getimgLink(HttpServletRequest req) {
-
+		for (TheaterList theaterList : thList) {
+			System.out.println(theaterList.getC_theaterName());
+		}
 		System.out.println(req.getParameter("c_posterName"));
+		thList.isEmpty();
+		
 		return "index";
 	}
 

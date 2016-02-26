@@ -2,6 +2,8 @@ package org.hatecouple.hate.db;
 
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.ibatis.session.SqlSession;
 import org.hatecouple.hate.bean.ImageAndTitle;
 import org.hatecouple.hate.bean.MovieAreaList;
@@ -32,5 +34,18 @@ public class DBDAO {
 		}
 		return mal;
 	}
+	
+	public void getMovieListAboutImglink(HttpServletRequest req) {
+		
+		ArrayList<MovieAreaList> mal  = new ArrayList<MovieAreaList>();
+		
+		CineMapper cm = ss.getMapper(CineMapper.class);
+		
+		
+		
+		
+	}
+	
+	
 	
 }

@@ -8,4 +8,8 @@
 	<select id="selectAreaMovieImg" parameterType="org.hatecouple.hate.bean.MovieAreaList" resultType="org.hatecouple.hate.bean.ImageAndTitle">
 		select DISTINCT cgvimagentitle.c_movieName , cgvimagentitle.c_posterName from cgvimagentitle, (select DISTINCT c_movieName from cgvmovielist where c_theaterName=#{c_theaterName}) areaInfo  where cgvimagentitle.c_moviename=areaInfo.c_moviename
 	</select>
+	
+	<select id="selectMovieInfoAboutImg" parameterType="org.hatecouple.hate.bean.imageNameAndTheaterName" resultType="org.hatecouple.hate.bean.MovieAreaList">
+		select areaimg.c_theaterName, areaimg.c_movieName, areaimg.c_movieTime, areaimg.c_clearChair from (select areaInfo.c_theaterName, areaInfo.c_movieName, areaInfo.c_movieTime, areaInfo.c_clearchair, cgvimagentitle.c_posterName from cgvimagentitle, (select c_theaterName,c_movieName,c_movieTime,c_clearchair from cgvmovielist where c_theaterName=#{c_theaterName}) areaInfo  where cgvimagentitle.c_movieName=areaInfo.c_movieName) areaimg where areaimg.c_posterName=#{c_posterName} 
+	</select>
 </mapper>
