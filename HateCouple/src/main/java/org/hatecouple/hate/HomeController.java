@@ -62,5 +62,12 @@ public class HomeController {
 		}
 		return d.getMovieInArea(thList);
 	}
+	
+	@RequestMapping(value = "/zxcv", method = RequestMethod.POST)
+	public String getimgLink(HttpServletRequest req) {
+
+		System.out.println(req.getParameter("c_posterName"));
+		return "index";
+	}
 
 }

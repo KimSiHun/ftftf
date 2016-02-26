@@ -52,7 +52,7 @@ $(document).ready(function() {
 						    
 						    // thNameJsonObj을 홈컨트롤러로 보내기 위한 ajax 매서드
 							$.ajax({
-								url : 'abc',
+								url : 'abc',								
 								method : "post", 
 								dataType : 'json',
 								data :JSON.stringify(thNameJsonObj), 
@@ -100,19 +100,38 @@ $(document).ready(function() {
 		         		                  $giveaID.attr('id', function (index){
 		       		                	   return 'link' + index;
 		       		                   });		          
-		                                    
-		                             });
-		                                    
-		                                    		                		           		                                    
+		                             });             		           		                                    
 		                            });
 		                           // 이미지 클릭 시 각 고유 이미지주소를 가져오기 위한 코드
 		                              $(function(){
-	                		                $("img[id^='img'").click(function() {
-	                		                    var getImgLink =$(this).attr("src");	                		                    
-	                		                    console.log(getImgLink);
-	                		                });
-	                		            });
-
+		                            	  
+	                		                $("img[id^='img'").click(function() {  
+	                		                    var getImgLink =$(this).attr("src");
+	                		                    
+	                		                    
+	                		                    $.ajax({
+	                		                        url: 'zxcv',
+	                		                        data: { 'c_posterName' : getImgLink},
+	                		                        type: "post",
+	                		                        cache: false,
+	                		                        success: function (data, stat, xhr) {
+	                		                            alert("sucess")
+	                		                        },
+	                		                        error: function (xhr, stat, err) {
+	                		                        	alert("error");
+	                							    	console.log(err);
+	                		                        }
+	                		                    });
+	      		                   
+		                		              });
+	                		                
+	                		               
+	      		                           });  
+	      		             
+            		 
+	                		       
+		                              
+		                              
 	                                    var mySlider = $( '#slide_banner' ).bxSlider( {
 	                                  	   mode: 'horizontal',// 가로 방향 수평 슬라이드
 	                                  	   speed: 500,        // 이동 속도를 설정
@@ -137,25 +156,18 @@ $(document).ready(function() {
 	                                  $('#nextBtn').on('click', function() {
 	                                     mySlider.goToNextSlide(); //다음 슬라이드 배너로 이동
 
-	                                  });   
-
-	                                  
+	                                  }); 
 								},
 								error : function(xhr, stat, err) {
 							    	alert("error");
 							    	console.log(err);
 							    }
 							});
-							
-							
-
-
 					});
 					
 				});
 				
 			});
-			
 			
 			
 		});		
