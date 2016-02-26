@@ -2,6 +2,7 @@
 $(document).ready(function() {
 		//정보표시 구역(두번째)으로 이동
 		$("#go").click(function() {
+			
 			var addr = document.getElementById('sample6_address').value;
 			document.getElementById('search_addr').value = addr;
 			var dongaddr = document.getElementById('sample6_address').value;
@@ -107,6 +108,7 @@ $(document).ready(function() {
 		                            	  
 	                		                $("img[id^='img'").click(function() {  
 	                		                    var getImgLink =$(this).attr("src");
+	                		                    $("#Tb").empty();
 	                		                    
 	                		                    
 	                		                    $.ajax({
@@ -117,13 +119,13 @@ $(document).ready(function() {
 	                		                        success: function (data, stat, xhr) {                		                        	
 	                		                        	
 	                		                        	 $.each(data, function(i, mv){
-	                                                         
-	                                                         var theaterTitle = $("<td></td>").text(mv.c_theaterName);
-	                                                         var movieTitle = $("<td></td>").text(mv.c_movieName);
-	                                                         var movieTime = $("<td></td>").text(mv.c_movieTime);
-	                                                         var clearChair = $("<td></td>").text(mv.c_clearChair);
+	                		                        		 
+	                                                         var theaterTitle = $('<td></td>').text(mv.c_theaterName);
+	                                                         var movieTitle = $('<td></td>').text(mv.c_movieName);
+	                                                         var movieTime = $('<td></td>').text(mv.c_movieTime);
+	                                                         var clearChair = $('<td></td>').text(mv.c_clearChair);
 	                                                         var tr =$('<tr></tr>').append(theaterTitle,movieTitle,movieTime,clearChair);
-	                                                         $("#Tb").append(tr).css("width","500px");   
+	                                                         $("#Tb").append(tr);   
 	                                                      });
 	                		                        },
 	                		                        error: function (xhr, stat, err) {
@@ -131,10 +133,7 @@ $(document).ready(function() {
 	                							    	console.log(err);
 	                		                        }
 	                		                    });
-	      		                   
 		                		              });
-	                		                
-	                		               
 	      		                           });  
 	      		             
 		                              
@@ -146,7 +145,7 @@ $(document).ready(function() {
 	                                  	   slideWidth: 100,   // 슬라이드 너비
 	                                  	   minSlides: 4,      // 최소 노출 개수
 	                                  	   maxSlides: 4,      // 최대 노출 개수
-	                                  	   slideMargin: 5,    // 슬라이드간의 간격
+	                                  	   slideMargin: 100,    // 슬라이드간의 간격
 	                                  	   auto: true,        // 자동 실행 여부
 	                                  	   autoHover: true,   // 마우스 호버시 정지 여부
 	                                  	   controls: false    // 이전 다음 버튼 노출 여부
@@ -179,6 +178,9 @@ $(document).ready(function() {
 		});		
 		// 최초 구역으로 이동 - 기존 주소창 비우기
 		$("#back").click(function() {
+			
+		    $("#Tb").empty();
+		    $("#slide_banner").empty();
 			$("#sample6_address").val(" ");
 			$("#fst").slideDown("slow");
 		});

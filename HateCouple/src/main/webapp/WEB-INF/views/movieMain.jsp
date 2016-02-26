@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-   pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,64 +10,72 @@
 <script src="./resources/js/jquery.bxslider.js"></script>
 
 <script type="text/javascript">
-$(document).ready(function(){
+	$(document).ready(function() {
 
-
-
-});
-
+	});
 </script>
 <style>
 * {
-   margin: 0;
-   padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #banner_wrap {
-   position: relative;
-   width: 800px;
+	position: relative;
+	width: 800px;
 }
 
 #slide_banner {
-   list-style: none;
-   margin: 0 auto;
-   display: inline-block;
+	list-style: none;
+	margin: 0 auto;
+	display: inline-block;
 }
 
 .slide_img {
-   margin: 0 auto;
+	margin: 0 auto;
 }
 
 #prevBtn {
-   position: absolute;
-   left: 0;
-   top: 100px;
+	
+	left: 0;
+	top: 100px;
 }
 
 #nextBtn {
-   position: absolute;
-   right: 0;
-   top: 100px;
+	
+	right: 0;
+	top: 100px;
 }
 </style>
 </head>
 
 <body>
-    <div id="banner_wrap">
-        <span id="slide_banner">
-        </span>
-    </div>
-    <p>
-            <a href="#" id="prevBtn">
-                <img src="resources/images/left.gif" alt="이전">
-            </a>
-        </p>
-        <p>
-            <a href="#" id="nextBtn">
-                <img src="resources/images/right.gif" alt="다음">
-            </a>
-        </p>
-    <table id ="Tb"></table>
+	<div id="banner_wrap">
+		<span id="slide_banner"> </span>
+	</div>
+	<p>
+		<a href="#" id="prevBtn"> <img src="resources/images/left.gif"
+			alt="이전">
+		</a>
+	</p>
+	<p>
+		<a href="#" id="nextBtn"> <img src="resources/images/right.gif"
+			alt="다음">
+		</a>
+	</p>
+	<table width="600px" height="30px" cellspacing="0">
+<tr>
+    <td>영화관</td>
+    <td>title</td>
+    <td width="100px">시작시간</td>
+    <td>잔여좌석</td>
+    
+</tr>
+</table>
+	<div style="width: 600px; height: 300px; overflow: auto">
+		<table id="Tb">
+		</table>
+	</div>
 </body>
 
 </html>

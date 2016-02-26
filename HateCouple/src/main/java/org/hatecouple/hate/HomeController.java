@@ -67,7 +67,8 @@ public class HomeController {
 	public ArrayList<MovieAreaList> getimgLink(HttpServletRequest req) {
 		ArrayList<MovieAreaList> mal = new ArrayList<MovieAreaList>(); 
 		mal = d.getMovieListAboutImglink(req, thList);
-		thList.isEmpty();
+		thList.clear();
+		
 		
 		return mal;
 	}
