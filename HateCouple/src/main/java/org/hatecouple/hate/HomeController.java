@@ -7,6 +7,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.hatecouple.hate.bean.ImageAndTitle;
+import org.hatecouple.hate.bean.MovieAreaList;
 import org.hatecouple.hate.bean.TheaterList;
 import org.hatecouple.hate.db.DBDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,14 +63,13 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/zxcv", method = RequestMethod.POST)
-	public String getimgLink(HttpServletRequest req) {
-		for (TheaterList theaterList : thList) {
-			System.out.println(theaterList.getC_theaterName());
-		}
-		System.out.println(req.getParameter("c_posterName"));
+	@ResponseBody
+	public ArrayList<MovieAreaList> getimgLink(HttpServletRequest req) {
+		ArrayList<MovieAreaList> mal = new ArrayList<MovieAreaList>(); 
+		mal = d.getMovieListAboutImglink(req, thList);
 		thList.isEmpty();
 		
-		return "index";
+		return mal;
 	}
 
 }

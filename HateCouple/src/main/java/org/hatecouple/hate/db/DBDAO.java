@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.hatecouple.hate.bean.ImageAndTitle;
 import org.hatecouple.hate.bean.MovieAreaList;
 import org.hatecouple.hate.bean.TheaterList;
+import org.hatecouple.hate.bean.imageNameAndTheaterName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,17 +36,19 @@ public class DBDAO {
 		return mal;
 	}
 	
-	public void getMovieListAboutImglink(HttpServletRequest req) {
+	public ArrayList<MovieAreaList> getMovieListAboutImglink(HttpServletRequest req,ArrayList<TheaterList> thlist) {
 		
 		ArrayList<MovieAreaList> mal  = new ArrayList<MovieAreaList>();
-		
+		ArrayList<imageNameAndTheaterName> inatn = new ArrayList<imageNameAndTheaterName>();
 		CineMapper cm = ss.getMapper(CineMapper.class);
+		String c_theaterName="";
+		String c_posterName = req.getParameter("c_posterName");
 		
-		
-		
-		
+		for (TheaterList thlis : thlist) {
+			c_theaterName=thlis.getC_theaterName();
+			mal.addAll(cm.selectMovieInfoAboutImg(new imageNameAndTheaterName(c_posterName,c_theaterName)));
+		}
+		return mal;
 	}
-	
-	
-	
+
 }

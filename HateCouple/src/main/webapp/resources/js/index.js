@@ -115,7 +115,7 @@ $(document).ready(function() {
 	                		                        type: "post",
 	                		                        cache: false,
 	                		                        success: function (data, stat, xhr) {
-	                		                            alert("sucess")
+	                		                            alert(data);
 	                		                        },
 	                		                        error: function (xhr, stat, err) {
 	                		                        	alert("error");
