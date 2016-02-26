@@ -32,6 +32,10 @@ public class DBDAO {
 			mal.addAll(cm.selectAreaMovieImg(new MovieAreaList(c_theaterName, null, null, null)));
 		}
 		
+		for (ImageAndTitle imageAndTitle : mal) {
+			System.out.println(imageAndTitle.getC_movieName() + " / "  + imageAndTitle.getC_posterName());
+		}
+		
 		return mal;
 	}
 	

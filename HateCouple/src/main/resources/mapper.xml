@@ -6,6 +6,6 @@
 	</select>
 	
 	<select id="selectAreaMovieImg" parameterType="org.hatecouple.hate.bean.MovieAreaList" resultType="org.hatecouple.hate.bean.ImageAndTitle">
-		select cgvimagentitle.c_movieName , cgvimagentitle.c_posterName from cgvimagentitle, (select c_movieName from cgvmovielist where c_theaterName=#{c_theaterName}) areaInfo  where cgvimagentitle.c_moviename=areaInfo.c_moviename
+		select DISTINCT cgvimagentitle.c_movieName , cgvimagentitle.c_posterName from cgvimagentitle, (select DISTINCT c_movieName from cgvmovielist where c_theaterName=#{c_theaterName}) areaInfo  where cgvimagentitle.c_moviename=areaInfo.c_moviename
 	</select>
 </mapper>

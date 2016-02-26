@@ -68,7 +68,6 @@ public class HomeController {
 
 			thList.add(th);
 		}
-		System.out.println(d.getMovieInArea(thList).get(0).toString());
 		return d.getMovieInArea(thList);
 	}
 
