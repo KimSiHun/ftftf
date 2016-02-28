@@ -22,12 +22,46 @@ $(document).ready(function() {
 					var lng = it.lng;
 					
 					var pos = lat+","+lng;
+				     
+		               // 어떻게 할까요~?알아맞춰보세요 딩동댕동 촉촉박사님 알아맞춰보세요 딩동댕동
+						// 지도 띄우기 추가
+		               if(i == 0){
+		                  var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+		                  var options = { //지도를 생성할 때 필요한 기본 옵션
+		                     center: new daum.maps.LatLng(lat, lng), //지도의 중심좌표
+		                     level: 7 //지도의 레벨(확대, 축소 정도)
+		                  };
+		   
+		                  var map = new daum.maps.Map(container, options); //지도 생성 및 객체 리턴
+		                 
+		               }
+
 					// 가공된 좌표, 검색질의로 해당 질의에 답 구하기.
 					var url2="https://apis.daum.net/local/v1/search/keyword.json?apikey=085c621120828d233c8a25e9eee763e8&q&query=CGV영화관&location="+pos+"&radius=2000";
 					$.getJSON(url2+"&callback=?",function(json2){
 						var items2 = json2.channel.item;
+						
+						// 지도 띄우기 추가
+						 var imageSrc = "http://i1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
+
+						
 						// 해당 json value로 li에 붙이기 . -> 영화관 이름만
 						$.each(items2,function(i,it2){
+							
+							// 여기부터 var mapTitle =  it2.title; 전까지가 마커 띄우기
+		                     // 마커 이미지의 이미지 크기 입니다
+		                     var imageSize = new daum.maps.Size(14, 25); 
+		                     
+		                     // 마커 이미지를 생성합니다    
+		                     var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize); 
+		                     
+		                     // 마커를 생성합니다
+		                     var marker = new daum.maps.Marker({
+		                        map: map, // 마커를 표시할 지도
+		                        position: new daum.maps.LatLng(it2.latitude, it2.longitude), // 마커를 표시할 위치  
+		                        image : markerImage // 마커 이미지 
+		                     });
+							
 							
 							var mapTitle =  it2.title;	
 							// CGV만 빼내기
