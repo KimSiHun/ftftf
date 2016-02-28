@@ -28,7 +28,7 @@
 
 		<div id="searchBox">
 			<!-- 유저가 주소검색으로만 입력할 수 있게 readonly사용 -->
-			<input type="text" id="sample6_address" placeholder="주소">
+			<input type="text" id="sample6_address" placeholder="서울 내 지역 검색 Ex)강남">
 			<button id="go">검색</button>
 		</div>
 
@@ -47,7 +47,7 @@
 
 			<div id="bar_weather">
 				<form name="rtcForm">
-					<input type="text" name="rtcInput" size="20" readonly="readonly" />
+					<input id="timeInput" type="text" name="rtcInput" size="20" readonly="readonly" />
 				</form>
 			</div>
 		</div>
