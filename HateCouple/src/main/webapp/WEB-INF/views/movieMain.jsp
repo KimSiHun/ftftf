@@ -25,6 +25,11 @@
 	width: 80%;
 }
 
+#banner_slider {
+	position: relative;
+	padding-left: 100px;
+}
+
 #slide_banner {
 	list-style: none;
 	margin: 0 auto;
@@ -49,18 +54,21 @@
 
 <body>
 	<div id="banner_wrap">
-		<span id="slide_banner"> </span>
+		<div>
+			<a href="#" id="prevBtn"> <img src="resources/images/left.gif"
+				alt="이전">
+			</a>
+		</div>
+		<div id="banner_slider">
+			<span id="slide_banner"> </span>
+		</div>
+		<div>
+			<a href="#" id="nextBtn"> <img src="resources/images/right.gif"
+				alt="다음">
+			</a>
+		</div>
 	</div>
-	<p>
-		<a href="#" id="prevBtn"> <img src="resources/images/left.gif"
-			alt="이전">
-		</a>
-	</p>
-	<p>
-		<a href="#" id="nextBtn"> <img src="resources/images/right.gif"
-			alt="다음">
-		</a>
-	</p>
+
 	<table width="600px" height="30px" cellspacing="0">
 		<tr>
 			<td>영화관</td>
