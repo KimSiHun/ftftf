@@ -187,7 +187,7 @@ $(document).ready(function() {
 	                                  	   pager: false,      // 현재 위치 페이징 표시 여부 설정
 	                                  	   moveSlides: 1,     // 슬라이드 이동시 개수
 	                                  	   slideWidth: 100,   // 슬라이드 너비
-	                                  	   minSlides: 4,      // 최소 노출 개수
+	                                  	   minSlides: 1,      // 최소 노출 개수
 	                                  	   maxSlides: 4,      // 최대 노출 개수
 	                                  	   slideMargin: 100,    // 슬라이드간의 간격
 	                                  	   auto: true,        // 자동 실행 여부

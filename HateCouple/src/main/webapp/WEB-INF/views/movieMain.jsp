@@ -22,7 +22,7 @@
 
 #banner_wrap {
 	position: relative;
-	width: 800px;
+	width: 80%;
 }
 
 #slide_banner {
@@ -36,13 +36,11 @@
 }
 
 #prevBtn {
-	
 	left: 0;
 	top: 100px;
 }
 
 #nextBtn {
-	
 	right: 0;
 	top: 100px;
 }
@@ -64,14 +62,14 @@
 		</a>
 	</p>
 	<table width="600px" height="30px" cellspacing="0">
-<tr>
-    <td>영화관</td>
-    <td>title</td>
-    <td width="100px">시작시간</td>
-    <td>잔여좌석</td>
-    
-</tr>
-</table>
+		<tr>
+			<td>영화관</td>
+			<td>title</td>
+			<td width="100px">시작시간</td>
+			<td>잔여좌석</td>
+
+		</tr>
+	</table>
 	<div style="width: 600px; height: 300px; overflow: auto">
 		<table id="Tb">
 		</table>
