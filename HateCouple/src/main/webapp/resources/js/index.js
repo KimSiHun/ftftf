@@ -40,10 +40,10 @@ $(document).ready(function() {
 					var url2="https://apis.daum.net/local/v1/search/keyword.json?apikey=085c621120828d233c8a25e9eee763e8&q&query=CGV영화관&location="+pos+"&radius=2000";
 					$.getJSON(url2+"&callback=?",function(json2){
 						var items2 = json2.channel.item;
-						
 						// 지도 띄우기 추가
 						 var imageSrc = "http://i1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
 
+						 var uniqueMapTitle = [];
 						
 						// 해당 json value로 li에 붙이기 . -> 영화관 이름만
 						$.each(items2,function(i,it2){
@@ -61,31 +61,47 @@ $(document).ready(function() {
 		                        position: new daum.maps.LatLng(it2.latitude, it2.longitude), // 마커를 표시할 위치  
 		                        image : markerImage // 마커 이미지 
 		                     });
-							
-							
 							var mapTitle =  it2.title;	
 							// CGV만 빼내기
 					        if ( mapTitle.indexOf('CGV') !== -1 ) {
-					          // 콘솔에 확인
-					        console.log('CGV', mapTitle); 
-					        
-					        
-					        
-							// list에 영화관 이름 붙이기. 상위 ul
-							var li = $('<li class = "theaterNameLI"></li>').append(mapTitle);
-							$('#theaterNameUL').append(li);
+					        	// CGV 이름만 빼내고 반복문 밖의 uniqueMapTitle변수에 JSON객체로 저장
+					        	uniq = {}
+					        	uniq ["mapTitle"] = mapTitle;
+					        	uniqueMapTitle.push(uniq);
 					        }
-						});						
-						
+						});		
+						// CGV이름의 중복값을 제거
+						var uniqMapTitles = [];         
+                        $.each(uniqueMapTitle, function(mapTitle, value){         
+                           if($.inArray(value.mapTitle, uniqMapTitles)== -1 ){            
+                        	   uniqMapTitles.push(value.mapTitle);
+                           }      
+                        });   
+                        var uniqMapTitless = uniqMapTitles;            
+                        
+                        var uniqMapTitlesss = [];            
+                        
+                        $.each(uniqMapTitless, function (index, value) {  
+                            var title = value;     
+                                item = {}
+                                item ["mapTitle"] = title;              
+                                uniqMapTitlesss.push(item);                
+                        });      
+               
+                        $.each(uniqMapTitlesss, function(i, mp){
+                        	 console.log(JSON.stringify(mp.mapTitle));
+                        	// list에 영화관 이름 붙이기. 상위 ul
+				        	var li = $('<li class = "theaterNameLI"></li>').append(mp.mapTitle);
+							$('#theaterNameUL').append(li);
+                        });
+                        
 						// mapAndList.jsp의 <ul><li></li><ul> 속의 영화관지점명의 값을 빼내고 json객체 생성
 						  thNameJsonObj = [];						  
 						    $(".theaterNameLI").each(function() {
 						        var thName = $(this).text();
-						        
 						       // CGV만 빼내기
 						        if ( thName.indexOf('CGV') !== -1 ) {
 						         // console.log('CGV', thName);  
-						       
 						          // 공백 없애기
 						          thName = thName.replace(/\s+/g, '');
 							        item = {}
@@ -93,7 +109,7 @@ $(document).ready(function() {
 							        thNameJsonObj.push(item);
 						        } 						       
 						    });
-						    console.log(JSON.stringify(thNameJsonObj));					
+						   // console.log(JSON.stringify(thNameJsonObj));					
 						    
 						    // thNameJsonObj을 홈컨트롤러로 보내기 위한 ajax 매서드
 							$.ajax({
@@ -112,8 +128,7 @@ $(document).ready(function() {
 		                                 }      
 		                              });            
 		                              // 위의 poster변수를 posters 변수에 저장
-		                              var posters = poster;                  
-		                              
+		                              var posters = poster;    
 		                              // json형식으로 다시 가공하여 var posterUrl = [];에 저장
 		                              var posterUrl = [];            
 		                              // posters의 유니크 배열값들을 다시 json형식으로 가공
@@ -127,7 +142,6 @@ $(document).ready(function() {
 		                             // console.log(JSON.stringify(posterUrl));  
 		                         
 		                              $.each(posterUrl, function(i, mv){ 
-		                                 
 		                                    var img = $('<img/>').attr('src', mv.c_posterName);
 		                                    
 		                                    $.each(img, function(i, mv){ 
@@ -149,12 +163,9 @@ $(document).ready(function() {
 		                            });
 		                           // 이미지 클릭 시 각 고유 이미지주소를 가져오기 위한 코드
 		                              $(function(){
-		                            	  
 	                		                $("img[id^='img'").click(function() {  
 	                		                    var getImgLink =$(this).attr("src");
 	                		                    $("#Tb").empty();
-	                		                    
-	                		                    
 	                		                    $.ajax({
 	                		                        url: 'zxcv',
 	                		                        data: { 'c_posterName' : getImgLink},
@@ -194,17 +205,14 @@ $(document).ready(function() {
 	                                  	   autoHover: true,   // 마우스 호버시 정지 여부
 	                                  	   controls: false    // 이전 다음 버튼 노출 여부
 	                                  	  } );
-
 	                                  //이전 버튼을 클릭하면 이전 슬라이드로 전환
 	                                  $('#prevBtn').on('click', function() {
 	                                     mySlider.goToPrevSlide(); //이전 슬라이드 배너로 이동
 	                                     //<a>에 링크 차단
 	                                  });
-
 	                                  //다음 버튼을 클릭하면 다음 슬라이드로 전환
 	                                  $('#nextBtn').on('click', function() {
 	                                     mySlider.goToNextSlide(); //다음 슬라이드 배너로 이동
-
 	                                  }); 
 								},
 								error : function(xhr, stat, err) {
@@ -213,21 +221,17 @@ $(document).ready(function() {
 							    }
 							});
 					});
-					
 				});
-				
 			});
-			
-			
 		});		
 		// 최초 구역으로 이동 - 기존 주소창 비우기
 		$("#back").click(function() {
-			
+			// 세센 초기화
 			$.ajax({
                 url: 'killSession',
                 type: "post",
-                success: function (data, stat, xhr) {           
-                	
+                success: function (data, stat, xhr) {
+                	// 뒤로가기 시 새로고침
                 	 location.reload();
                 	 console.log("success in reload");
                 },
@@ -235,7 +239,6 @@ $(document).ready(function() {
                 	alert("error in reload");
                 }
             });
-			
 		    $("#Tb").empty();
 		    $("#slide_banner").empty();
 			$("#sample6_address").val(" ");
