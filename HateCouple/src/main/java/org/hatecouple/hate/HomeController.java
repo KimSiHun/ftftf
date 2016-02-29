@@ -47,6 +47,16 @@ public class HomeController {
 
 		return "index";
 	}
+	
+	@RequestMapping(value = "/killSession", method = RequestMethod.GET)
+	public String killsession(HttpServletRequest req) {
+
+		HttpSession session = req.getSession();
+		session.removeAttribute("list");
+		
+		return "index";
+	}
+	
 
 	@RequestMapping("/abc")
 	@ResponseBody
@@ -61,6 +71,7 @@ public class HomeController {
 			thList.add(th);
 		}
 		session.setAttribute("list", thList);
+		
 		return d.getMovieInArea(thList);
 	}
 
