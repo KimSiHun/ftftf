@@ -1,36 +1,22 @@
 @CHARSET "UTF-8";
 
 #fst {
-	width: 100%;
-	height: 930px;
-	margin: 5px 0px 15px 0px;
-	text-align: center;
-	color: #000000;
-	background-color: #ffffff;
-	border: solid 2px #c3c3c3;
-}
-
-#logo {
-	height: 200px;
-	width: 600px;
-	margin: auto;
-	padding-top: 100px;
-	color: #ffffff;
-	text-align: center;
-	background-color: #424242;
-	border: solid 2px #c3c3c3;
+   background: url("http://localhost:8080/hate/resources/images/popcorn.png") no-repeat center center fixed ;
+   width: 100%;
+   height: 930px;
+   margin: 5px 0px 15px 0px;
+   text-align: center;
+   color: #000000;
+   border: solid 2px #c3c3c3;
 }
 
 #searchBox {
 	margin: auto;
 	width: 500px;
 	height: 50px;
-	background-color: #ffffff;
-	border: solid 1px #505050;
 }
 
 #sample6_address{
-	
 	height: 25px;
 	
 }
