@@ -48,7 +48,7 @@ public class HomeController {
 		return "index";
 	}
 	
-	@RequestMapping(value = "/killSession", method = RequestMethod.GET)
+	@RequestMapping(value = "/killSession", method = RequestMethod.POST)
 	public String killsession(HttpServletRequest req) {
 
 		HttpSession session = req.getSession();

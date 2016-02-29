@@ -67,7 +67,9 @@ $(document).ready(function() {
 							// CGV만 빼내기
 					        if ( mapTitle.indexOf('CGV') !== -1 ) {
 					          // 콘솔에 확인
-					        console.log('CGV', mapTitle);  
+					        console.log('CGV', mapTitle); 
+					        
+					        
 					        
 							// list에 영화관 이름 붙이기. 상위 ul
 							var li = $('<li class = "theaterNameLI"></li>').append(mapTitle);
@@ -220,6 +222,19 @@ $(document).ready(function() {
 		});		
 		// 최초 구역으로 이동 - 기존 주소창 비우기
 		$("#back").click(function() {
+			
+			$.ajax({
+                url: 'killSession',
+                type: "post",
+                success: function (data, stat, xhr) {           
+                	
+                	 location.reload();
+                	 console.log("success in reload");
+                },
+                error: function (xhr, stat, err) {
+                	alert("error in reload");
+                }
+            });
 			
 		    $("#Tb").empty();
 		    $("#slide_banner").empty();
