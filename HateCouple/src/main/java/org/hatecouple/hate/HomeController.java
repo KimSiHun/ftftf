@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.hatecouple.hate.bean.ImageAndTitle;
 import org.hatecouple.hate.bean.MovieAreaList;
@@ -19,7 +20,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
-	ArrayList<TheaterList> thList = new ArrayList<TheaterList>();
 	@Autowired
 	private DBDAO d;
 
@@ -50,8 +50,9 @@ public class HomeController {
 
 	@RequestMapping("/abc")
 	@ResponseBody
-	public ArrayList<ImageAndTitle> getClientList(@RequestBody List<Map<String, Object>> list) {
-		
+	public ArrayList<ImageAndTitle> getClientList(@RequestBody List<Map<String, Object>> list,HttpServletRequest req) {
+		ArrayList<TheaterList> thList = new ArrayList<TheaterList>();
+		HttpSession session = req.getSession();
 		for (Map<String, Object> t : list) {
 
 			TheaterList th = new TheaterList();
@@ -59,6 +60,7 @@ public class HomeController {
 
 			thList.add(th);
 		}
+		session.setAttribute("list", thList);
 		return d.getMovieInArea(thList);
 	}
 
@@ -66,10 +68,7 @@ public class HomeController {
 	@ResponseBody
 	public ArrayList<MovieAreaList> getimgLink(HttpServletRequest req) {
 		ArrayList<MovieAreaList> mal = new ArrayList<MovieAreaList>(); 
-		mal = d.getMovieListAboutImglink(req, thList);
-		thList.clear();
-		
-		
+		mal = d.getMovieListAboutImglink(req);
 		return mal;
 	}
 
