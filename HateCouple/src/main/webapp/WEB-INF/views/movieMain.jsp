@@ -9,11 +9,6 @@
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="./resources/js/jquery.bxslider.js"></script>
 
-<script type="text/javascript">
-	$(document).ready(function() {
-
-	});
-</script>
 <style>
 * {
 	margin: 0;
@@ -63,32 +58,36 @@
 }
 
 #BigTable {
-	width: 700px;
+	width: 800px;
 	height: 300px;
 	margin: auto;
 	overflow-x: hidden;
 }
 
-#Tableth {
-	width: 800px;
-	background: #333;
-	color: #fff;
-	font-size: 18px;
-	font-weight: bold;
-	text-align: center;
-	padding: 10px 0;
-}
+.Tableth{
+  width: 800px;
+  background-color:rgba(31,0,0,0.6);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+ border:0;
+   }
 
+tr:hover{background-color:rgb(67,0,0)}
+   
 #Tablecontent {
-	width: 800px;
-	background: #333;
-	color: #fff;
-	font-size: 18px;
-	font-weight: bold;
-	text-align: center;
-	padding: 10px 0;
-	align: center;
-}
+  width: 800px;
+  background-color: rgba(31,0,0,0.7);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  align:center;
+  left: auto;
+   }
 </style>
 </head>
 
@@ -120,10 +119,9 @@
 	<div id="BigTable">
 		<table>
 			<tr align="center">
-				<th width="100px" id="Tableth">영화관</th>
-				<th id="Tableth">영화 제목</th>
-				<th id="Tableth">시작시간</th>
-				<th id="Tableth">잔여좌석</th>
+				<th class="Tableth">영화관</th>
+				<th class="Tableth">영화 제목</th>
+				<th class="Tableth">시작시간(잔여좌석)</th>
 			</tr>
 		</table>
 

@@ -165,7 +165,7 @@ $(document).ready(function() {
 		                              $(function(){
 	                		                $("img[id^='img'").click(function() {  
 	                		                    var getImgLink =$(this).attr("src");
-	                		                    $("#Tb").empty();
+	                		                    $("#Tablecontent").empty();
 	                		                    $.ajax({
 	                		                        url: 'zxcv',
 	                		                        data: { 'c_posterName' : getImgLink},
@@ -177,9 +177,9 @@ $(document).ready(function() {
 	                		                        		 
 	                                                         var theaterTitle = $('<td></td>').text(mv.c_theaterName);
 	                                                         var movieTitle = $('<td></td>').text(mv.c_movieName);
-	                                                         var movieTime = $('<td></td>').text(mv.c_movieTime);
-	                                                         var clearChair = $('<td></td>').text(mv.c_clearChair);
-	                                                         var tr =$('<tr></tr>').append(theaterTitle,movieTitle,movieTime,clearChair);
+	                                                         var movieTime = $('<td></td>').text(mv.c_movieTime+"("+mv.c_clearChair+")");
+	                                                         
+	                                                         var tr =$('<tr></tr>').append(theaterTitle,movieTitle,movieTime);
 	                                                         $("#Tablecontent").append(tr);   
 	                                                      });
 	                		                        },
@@ -263,23 +263,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	function realtimeClock() {
-		document.rtcForm.rtcInput.value = getTimeStamp();
-		setTimeout("realtimeClock()", 1000);
-	}
-
-	function getTimeStamp() { // 24시간제
-		var d = new Date();
-		var s = leadingZeros(d.getFullYear(), 4) + '-'
-				+ leadingZeros(d.getMonth() + 1, 2) + '-'
-				+ leadingZeros(d.getDate(), 2) + ' ' +
-
-				leadingZeros(d.getHours(), 2) + ':'
-				+ leadingZeros(d.getMinutes(), 2) + ':'
-				+ leadingZeros(d.getSeconds(), 2);
-		return s;
-	}
-
+	
 	function leadingZeros(n, digits) {
 		var zero = '';
 		n = n.toString();

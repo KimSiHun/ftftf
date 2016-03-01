@@ -19,7 +19,7 @@
 
 	<hr>
 	<br>
-	<div id="map" style="width: 95%; height: 400px; margin: auto;"></div>
+	<div id="map" style="width: 95%; height: 350px; margin: auto;"></div>
 	<ul id="theaterNameUL"></ul>
 </body>
 </html>
