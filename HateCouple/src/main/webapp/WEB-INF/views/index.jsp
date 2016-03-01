@@ -15,18 +15,15 @@
 <body style="overflow: hidden;" onload="realtimeClock()">
 
 	<div id="fst">
-		<table id="icon_t">
+		<table id="icon_top">
 			<!-- 유저가 주소검색으로만 입력할 수 있게 readonly사용 -->
-			<tr height="60%">
-				<td><img
-					src="http://localhost:8080/hate/resources/images/popcorn_icon.png"
-					width="100%" height="100%"></td>
-			</tr>
-			<tr id="icon_under" height="40%">
-				<td id="searchBox"><input type="text" id="sample6_address"
-					placeholder="서울 내 지역 검색 Ex)강남">
-					<button id="go" style="width: 100px; height: 60px;">검색</button></td>
-			</tr>
+				<tr height="80%"><td><img src="http://localhost:8080/hate/resources/images/popcorn_icon.png" width="100%" height="100%"></td></tr>
+				<tr id="icon_under" height="20%">
+					<td id="searchBox">
+						<input type="text" id="sample6_address" placeholder="서울 내 지역 검색 Ex)강남">
+						<button id="go">검색</button>
+					</td>
+				</tr>
 		</table>
 	</div>
 
