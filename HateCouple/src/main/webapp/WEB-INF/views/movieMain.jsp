@@ -24,6 +24,7 @@
 	position: relative;
 	width: 700px;
 	margin: auto;
+	margin-bottom: -20%;
 }
 
 #banner_slider {
@@ -41,23 +42,30 @@
 	margin: 0 auto;
 }
 
+.arrowDivice {
+	padding-top: 130px;
+}
+
 #first {
 	width: 50px;
 	height: 264px;
 	float: left;
-	margin-top: 95px;
+	vertical-align: middle;
+	display: inline-block;
 }
 
 #right {
 	width: 50px;
 	height: 264px;
 	float: left;
-	margin-top: 95px;
+	vertical-align: middle;
+	display: inline-block;
 }
 
 #BigTable {
-	width: 800px;
+	width: 700px;
 	height: 300px;
+	margin: auto;
 	overflow-x: hidden;
 }
 
@@ -68,7 +76,7 @@
 	font-size: 18px;
 	font-weight: bold;
 	text-align: center;
-	padding: 15px 0;
+	padding: 10px 0;
 }
 
 #Tablecontent {
@@ -78,7 +86,7 @@
 	font-size: 18px;
 	font-weight: bold;
 	text-align: center;
-	padding: 15px 0;
+	padding: 10px 0;
 	align: center;
 }
 </style>
@@ -87,18 +95,24 @@
 <body>
 	<div id="banner_wrap">
 		<div id="first">
-			<a href="#" id="prevBtn"> <img class="Img"
-				src="resources/images/left.gif" alt="이전">
-			</a>
+			<div class="arrowDivice">
+				<a href="#" id="prevBtn"> <img class="Img"
+					src="resources/images/left.gif" alt="이전">
+				</a>
+			</div>
+
 		</div>
 		<div id="banner_slider">
 			<span id="slide_banner"> </span>
 		</div>
 		<div id="right">
-			<a href="#" id="nextBtn"> <img class="Img"
-				src="resources/images/right.gif" alt="다음">
-			</a>
+			<div class="arrowDivice">
+				<a href="#" id="nextBtn"> <img class="Img"
+					src="resources/images/right.gif" alt="다음">
+				</a>
+			</div>
 		</div>
+
 	</div>
 
 
