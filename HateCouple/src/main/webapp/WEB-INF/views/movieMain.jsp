@@ -59,8 +59,8 @@
 
 #BigTable {
 	width: 800px;
-	height: 300px;
-	margin: auto;
+	height: 400px;
+	margin-left: 100px;
 	overflow-x: hidden;
 }
 
@@ -115,7 +115,7 @@
 	</div>
 
 
-
+<div>
 	<div id="BigTable">
 		<table>
 			<tr align="center">
@@ -130,7 +130,7 @@
 
 		</table>
 	</div>
-
+</div>
 </body>
 
 </html>

@@ -92,7 +92,7 @@ body {
 
 #left_content {
 	width: 70%;
-	height: 545px;
+	height: 700px;
 	padding-top: 30px;
 	padding-bottom: 20px;
 	background-color: white;
@@ -103,7 +103,7 @@ body {
 #right_content {
 	background-color: white;
 	padding-bottom: 20px;
-	height: 575px;
+	height: 730px;
 	width: 29%;
 	text-align: center;
 	float: right;
