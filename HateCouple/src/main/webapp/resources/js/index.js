@@ -3,9 +3,9 @@ $(document).ready(function() {
 		//정보표시 구역(두번째)으로 이동
 		$("#go").click(function() {
 			if ($('#sample6_address').val() == ''){
-				 //alert('주소를 입력해주세요');
+				 alert('주소를 입력해주세요');
 				 
-				 location.href="gotoErrPage";
+				 location.href="/hate";
 				
 			}else{
 			
