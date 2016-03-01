@@ -22,12 +22,12 @@
 
 #banner_wrap {
 	position: relative;
-	width: 80%;
+	width: 700px;
 }
 
 #banner_slider {
-	position: relative;
-	padding-left: 100px;
+	width: 600px;
+	float: left;
 }
 
 #slide_banner {
@@ -40,48 +40,76 @@
 	margin: 0 auto;
 }
 
-#prevBtn {
-	left: 0;
-	top: 100px;
+#first {
+	width: 50px;
+	height: 264px;
+	float: left;
+	margin-top: 95px;
 }
 
-#nextBtn {
-	right: 0;
-	top: 100px;
+#right {
+	width: 50px;
+	height: 264px;
+	float: left;
+	margin-top: 95px;
+}
+
+#Tableth {
+	width: 800px;
+	background: #333;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding: 15px 0;
+}
+
+#Tablecontent {
+	width: 800px;
+	background: #333;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding: 15px 0;
+	align: center;
 }
 </style>
 </head>
 
 <body>
 	<div id="banner_wrap">
-		<div>
-			<a href="#" id="prevBtn"> <img src="resources/images/left.gif"
-				alt="이전">
+		<div id="first">
+			<a href="#" id="prevBtn"> <img class="Img"
+				src="resources/images/left.gif" alt="이전">
 			</a>
 		</div>
 		<div id="banner_slider">
 			<span id="slide_banner"> </span>
 		</div>
-		<div>
-			<a href="#" id="nextBtn"> <img src="resources/images/right.gif"
-				alt="다음">
+		<div id="right">
+			<a href="#" id="nextBtn"> <img class="Img"
+				src="resources/images/right.gif" alt="다음">
 			</a>
 		</div>
 	</div>
 
-	<table width="600px" height="30px" cellspacing="0">
-		<tr>
-			<td>영화관</td>
-			<td>title</td>
-			<td width="100px">시작시간</td>
-			<td>잔여좌석</td>
+	<div id="BigTable"
+		style="width: 800px; height: 300px; overflow-x: hidden;">
+		<table>
+			<tr align="center">
+				<th width="100px" id="Tableth">영화관</th>
+				<th id="Tableth">영화 제목</th>
+				<th id="Tableth">시작시간</th>
+				<th id="Tableth">잔여좌석</th>
+			</tr>
+		</table>
 
-		</tr>
-	</table>
-	<div style="width: 600px; height: 300px; overflow: auto">
-		<table id="Tb">
+		<table id="Tablecontent">
+
 		</table>
 	</div>
+
 </body>
 
 </html>

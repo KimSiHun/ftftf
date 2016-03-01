@@ -34,10 +34,10 @@
 	<!-- 2번째 view 상단바 자리 -->
 		<div id="snd_bar">
 			<div id="bar_location">
-				<form name="addrForm">
-					<input id="search_addr" type="text" name="addrInput" size="30" />
-				</form>
-				<button id="back">지역 재설정</button>
+				
+					<a id ="search_addr"><img src = "resources/images/backspace.png" width="50px" height="50px"></a>
+				
+				
 			</div>
 
 			<div id="bar_weather">

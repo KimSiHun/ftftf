@@ -180,7 +180,7 @@ $(document).ready(function() {
 	                                                         var movieTime = $('<td></td>').text(mv.c_movieTime);
 	                                                         var clearChair = $('<td></td>').text(mv.c_clearChair);
 	                                                         var tr =$('<tr></tr>').append(theaterTitle,movieTitle,movieTime,clearChair);
-	                                                         $("#Tb").append(tr);   
+	                                                         $("#Tablecontent").append(tr);   
 	                                                      });
 	                		                        },
 	                		                        error: function (xhr, stat, err) {
@@ -225,7 +225,7 @@ $(document).ready(function() {
 			});
 		});		
 		// 최초 구역으로 이동 - 기존 주소창 비우기
-		$("#back").click(function() {
+		$("#search_addr").click(function() {
 			// 세센 초기화
 			$.ajax({
                 url: 'killSession',
