@@ -5,23 +5,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style type="text/css">
-
-#theaterNameUL{
-text-align: left;
-
+#theaterNameUL {
+	text-align: center;
+	line-height: 2em;
+	list-style: none;
+	background-color: white;
 }
-
-
-
 </style>
 
 <title>Insert title here</title>
 </head>
 <body>
-		
-		<hr>
-		<br>
-		<div id="map" style="width: 95%; height: 400px; margin:auto;"></div>
-		<ul id ="theaterNameUL"></ul>
+
+	<hr>
+	<br>
+	<div id="map" style="width: 95%; height: 400px; margin: auto;"></div>
+	<ul id="theaterNameUL"></ul>
 </body>
 </html>

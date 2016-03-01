@@ -1,5 +1,11 @@
 @CHARSET "UTF-8";
 
+body {
+	background:
+		url("http://localhost:8080/hate/resources/images/hellomom.png")
+		no-repeat center center fixed;
+}
+
 #fst {
 	background:
 		url("http://localhost:8080/hate/resources/images/popcorn.png")
@@ -28,76 +34,78 @@
 	background-color: #009688;
 	color: white;
 	border: #009688;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 #snd {
-	height: 930px;
-	width: 100%;
+	height: 90%;
+	width: 75%;
+	margin: 30px;
+	margin-top: auto;
+	margin-bottom: auto;
 	text-align: center;
-	background-color: #ffffff;
+	padding-top: 20px;
+	margin: 0px auto;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
 	border: solid 2px #c3c3c3;
+}
+
+#search_addr {
+	display: none;
 }
 
 #snd_bar {
 	width: 100%;
-	height: 100px;
-	margin: 0px 0px 0px 0px;
+	height: 80px;
+	padding-bottom: 30px;
+	background-color: white;
 	text-align: center;
-	background-color: #00BFA5;
-	color: #ffffff;
-	border-bottom: solid 1px #00BFA5;
-	border: #00BFA5;
+	margin-bottom: 10px;
 }
 
 #bar_location {
-	width: 400px;
-	height: 40px;
-	margin-top: auto;
-	margin-bottom: auto;
+	width: 100px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	margin-left: 10px;
 	text-align: center;
-	color: #ffffff;
 	float: left;
+	visibilit: hidden;
 }
 
 #bar_weather {
-	height: 50px;
-	margin-right: 10px;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-bottom: 30px;
 	text-align: center;
-	background-color: #424242;
-	color: #ffffff;
 	float: right;
 }
 
 #timeInput {
-	valign: center;
-	height: 50px;
-	background-color: #1DE9B6;
-	border: #1DE9B6;
-	color: white;
+	padding-top: 30px;
+	text-align: center;
+	color: black;
 	font-size: 130%;
 }
 
 #left_content {
-	height: 865px;
 	width: 70%;
-	color: #000000;
+	height: 545px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	background-color: white;
 	text-align: center;
-	background-color: #ffffff;
-	border: solid 2px #c3c3c3;
 	float: left;
 }
 
 #right_content {
-	height: 865px;
+	background-color: white;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	height: 545px;
 	width: 29%;
-	color: #000000;
 	text-align: center;
-	background-color: #ffffff;
-	border: solid 2px #c3c3c3;
 	float: right;
-}
-
-#empty {
-	height: 100px;
 }

@@ -23,6 +23,7 @@
 #banner_wrap {
 	position: relative;
 	width: 700px;
+	margin: auto;
 }
 
 #banner_slider {
@@ -52,6 +53,12 @@
 	height: 264px;
 	float: left;
 	margin-top: 95px;
+}
+
+#BigTable {
+	width: 800px;
+	height: 300px;
+	overflow-x: hidden;
 }
 
 #Tableth {
@@ -94,8 +101,9 @@
 		</div>
 	</div>
 
-	<div id="BigTable"
-		style="width: 800px; height: 300px; overflow-x: hidden;">
+
+
+	<div id="BigTable">
 		<table>
 			<tr align="center">
 				<th width="100px" id="Tableth">영화관</th>
@@ -104,6 +112,7 @@
 				<th id="Tableth">잔여좌석</th>
 			</tr>
 		</table>
+
 
 		<table id="Tablecontent">
 
