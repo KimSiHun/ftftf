@@ -120,6 +120,24 @@ $(document).ready(function() {
 								processData : true /*querySTring make false*/,
 								contentType : "application/json; charset=UTF-8",
 								success : function(data, stat, xhr) {
+									
+										
+									
+									if(data.length == 0) {
+//									    alert('empty');
+//									    $.ajax({
+//								            type: "GET",
+//								            url: "gotoErrPage",
+//								            success: function(response) {
+//								            	
+//								            }
+										
+//								        });
+								    location.href="gotoErrPage";
+									    
+									    
+									    return;
+									}
 									  var poster = [];         
 		                              // 유니크값을 뽑아내기 위한 반복메서드
 		                              $.each(data, function(c_posterName, value){         
@@ -184,7 +202,7 @@ $(document).ready(function() {
 	                                                      });
 	                		                        },
 	                		                        error: function (xhr, stat, err) {
-	                		                        	alert("error");
+	                		                        	alert("error in movieInfo table");
 	                							    	console.log(err);
 	                		                        }
 	                		                    });
@@ -216,7 +234,7 @@ $(document).ready(function() {
 	                                  }); 
 								},
 								error : function(xhr, stat, err) {
-							    	alert("error");
+							    	alert("error aaaa");
 							    	console.log(err);
 							    }
 							});

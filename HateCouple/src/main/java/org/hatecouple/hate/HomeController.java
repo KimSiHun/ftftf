@@ -82,5 +82,13 @@ public class HomeController {
 		mal = d.getMovieListAboutImglink(req);
 		return mal;
 	}
+	
+	@RequestMapping(value = "/gotoErrPage", method = RequestMethod.GET)
+	public String gotoErrPage() {
+
+		return "errPage";
+	}
+	
+
 
 }

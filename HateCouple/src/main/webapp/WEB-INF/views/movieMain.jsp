@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <head>
-<title>bxSlider</title>
+<title>SelfPopcorn</title>
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="./resources/js/jquery.bxslider.js"></script>
 
