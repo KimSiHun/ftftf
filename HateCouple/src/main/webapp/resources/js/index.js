@@ -226,6 +226,7 @@ $(document).ready(function() {
 		});		
 		// 최초 구역으로 이동 - 기존 주소창 비우기
 		$("#search_addr").click(function() {
+			$("#fst").slideDown("slow");
 			// 세센 초기화
 			$.ajax({
                 url: 'killSession',
@@ -239,6 +240,7 @@ $(document).ready(function() {
                 	alert("error in reload");
                 }
             });
+			
 		    $("#Tb").empty();
 		    $("#slide_banner").empty();
 			$("#sample6_address").val(" ");

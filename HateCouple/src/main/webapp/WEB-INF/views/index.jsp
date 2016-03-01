@@ -20,7 +20,7 @@
 				<tr height="80%"><td><img src="http://localhost:8080/hate/resources/images/popcorn_icon.png" width="100%" height="100%"></td></tr>
 				<tr id="icon_under" height="20%">
 					<td id="searchBox">
-						<input type="text" id="sample6_address" placeholder="서울 내 지역 검색 Ex)강남">
+						<input type="text" id="sample6_address" placeholder="서울 내 지역 검색 Ex)강남" style="font-size: 15pt;">
 						<button id="go">검색</button>
 					</td>
 				</tr>
