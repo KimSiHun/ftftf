@@ -179,7 +179,7 @@ $(document).ready(function() {
 	                                                         var movieTitle = $('<td></td>').text(mv.c_movieName);
 	                                                         var movieTime = $('<td></td>').text(mv.c_movieTime+"("+mv.c_clearChair+")");
 	                                                         
-	                                                         var tr =$('<tr></tr>').append(theaterTitle,movieTitle,movieTime);
+	                                                         var tr =$('<tr></tr>').attr('class',"trHover").append(theaterTitle,movieTitle,movieTime);
 	                                                         $("#Tablecontent").append(tr);   
 	                                                      });
 	                		                        },

@@ -75,7 +75,7 @@
  border:0;
    }
 
-tr:hover{background-color:rgb(67,0,0)}
+.trHover:hover{background-color:rgb(67,0,0)}
    
 #Tablecontent {
   width: 800px;
