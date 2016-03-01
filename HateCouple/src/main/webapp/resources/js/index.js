@@ -2,6 +2,16 @@
 $(document).ready(function() {
 		//정보표시 구역(두번째)으로 이동
 		$("#go").click(function() {
+			if ($('#sample6_address').val() == ''){
+				 //alert('주소를 입력해주세요');
+				 
+				 location.href="gotoErrPage";
+				
+			}else{
+				
+				
+		
+			
 			
 			var addr = document.getElementById('sample6_address').value;
 			document.getElementById('search_addr').value = addr;
@@ -241,6 +251,7 @@ $(document).ready(function() {
 					});
 				});
 			});
+			}
 		});		
 		// 최초 구역으로 이동 - 기존 주소창 비우기
 		$("#search_addr").click(function() {
@@ -264,6 +275,7 @@ $(document).ready(function() {
 			$("#sample6_address").val(" ");
 			$("#fst").slideDown("slow");
 		});
+		
 	});	
 //	//마우스 스크롤 금지
 //	$(document)
