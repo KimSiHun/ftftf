@@ -8,10 +8,6 @@ $(document).ready(function() {
 				 location.href="gotoErrPage";
 				
 			}else{
-				
-				
-		
-			
 			
 			var addr = document.getElementById('sample6_address').value;
 			document.getElementById('search_addr').value = addr;

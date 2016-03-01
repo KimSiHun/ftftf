@@ -18,35 +18,35 @@ body {
 }
 
 #icon_top {
-	font-family:'맑은고딕', 'MalgunGothic';
+	font-family: '맑은고딕', 'MalgunGothic';
 	font-size: 20pt;
 	background-color: #ffffff;
-	width:500px;
-	height:700px;
+	width: 500px;
+	height: 700px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 100px;
 	border: solid #5c0000 10px;
-	border-top-left-radius:1em;
-	border-top-right-radius:1em;
-	border-bottom-right-radius:1em;
-	border-bottom-left-radius:1em;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	border-bottom-right-radius: 1em;
+	border-bottom-left-radius: 1em;
 	border-collapse: separate;
-	border-spacing: 0px; 
+	border-spacing: 0px;
 }
 
 #searchBox {
-	padding:0;
-    border-spacing:0px 0px; 
+	padding: 0;
+	border-spacing: 0px 0px;
 	background-color: #5c0000;
-	border-top-left-radius:325px 2em;;
-	border-top-right-radius:325px 2em;;
+	border-top-left-radius: 325px 2em;;
+	border-top-right-radius: 325px 2em;;
 }
 
 #sample6_address {
-	height:40px;
+	height: 40px;
 	width: 70%;
-	font-size:10pt;
+	font-size: 10pt;
 }
 
 #go {
@@ -82,6 +82,12 @@ body {
 
 #backspace {
 	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+#sndLogo {
+	
 }
 
 #left_content {

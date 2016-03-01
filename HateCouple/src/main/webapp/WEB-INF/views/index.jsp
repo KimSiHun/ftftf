@@ -17,13 +17,16 @@
 	<div id="fst">
 		<table id="icon_top">
 			<!-- 유저가 주소검색으로만 입력할 수 있게 readonly사용 -->
-				<tr height="80%"><td><img src="http://localhost:8080/hate/resources/images/popcorn_icon.png" width="100%" height="100%"></td></tr>
-				<tr id="icon_under" height="20%">
-					<td id="searchBox">
-						<input type="text" id="sample6_address" placeholder="서울 내 지역 검색 Ex)강남" style="font-size: 15pt;">
-						<button id="go">검색</button>
-					</td>
-				</tr>
+			<tr height="80%">
+				<td><img
+					src="http://localhost:8080/hate/resources/images/popcorn_icon.png"
+					width="100%" height="100%"></td>
+			</tr>
+			<tr id="icon_under" height="20%">
+				<td id="searchBox"><input type="text" id="sample6_address"
+					placeholder="서울 내 지역 검색 Ex)강남" style="font-size: 15pt;">
+					<button id="go">검색</button></td>
+			</tr>
 		</table>
 	</div>
 
@@ -31,11 +34,19 @@
 	<div id="snd">
 		<!-- 2번째 view 상단바 자리 -->
 		<div id="snd_bar">
-			<div id="backspace">
-				<a id="search_addr"><img src="resources/images/backspace.png"
-					width="100px" height="100px"></a>
-
+			<div>
+				<div id="backspace">
+					<a id="search_addr"><img src="resources/images/backspace.png"
+						width="70px" height="70px"></a>
+				</div>
 			</div>
+			<div>
+			<div>
+				<img id="sndLogo" src="resources/images/sndLogo.png" width="600px"
+					height="120px">
+			</div>
+			</div>
+			<div></div>
 
 		</div>
 
