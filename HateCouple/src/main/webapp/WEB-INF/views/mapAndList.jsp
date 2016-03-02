@@ -19,9 +19,18 @@
 	left: auto;
 }
 
+#textSpan {
+	color: #8F1717;
+	font-family: Consolas, monaco, monospace;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
 
 #cgvLogo {
-	margin-top: 150px;
+	margin-top: 125px;
 }
 </style>
 
@@ -35,9 +44,10 @@
 	<br>
 	<ul id="theaterNameUL"></ul>
 	<div>
-		<div>go to 
-			<a href="http://www.cgv.co.kr/ticket/"><img id="cgvLogo"
-				src="resources/images/cgv.png" alt="cgv"></a>
+		<div>
+			<span id="textSpan">go to</sapn> <a
+				href="http://www.cgv.co.kr/ticket/"><img id="cgvLogo"
+					src="resources/images/cgv.png" alt="cgv"></a>
 		</div>
 	</div>
 </body>
