@@ -64,30 +64,32 @@
 	overflow-x: hidden;
 }
 
-.Tableth{
-  width: 800px;
-  background-color:rgba(31,0,0,0.6);
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px 0;
- border:0;
-   }
+.Tableth {
+	width: 800px;
+	background-color: rgba(31, 0, 0, 0.6);
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px 0;
+	border: 0;
+}
 
-.trHover:hover{background-color:rgb(67,0,0)}
-   
+.trHover:hover {
+	background-color: rgb(67, 0, 0)
+}
+
 #Tablecontent {
-  width: 800px;
-  background-color: rgba(31,0,0,0.7);
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px 0;
-  align:center;
-  left: auto;
-   }
+	width: 800px;
+	background-color: rgba(31, 0, 0, 0.7);
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px 0;
+	align: center;
+	left: auto;
+}
 </style>
 </head>
 
@@ -113,24 +115,19 @@
 		</div>
 
 	</div>
-
-
-<div>
-	<div id="BigTable">
-		<table>
-			<tr align="center">
-				<th class="Tableth">영화관</th>
-				<th class="Tableth">영화 제목</th>
-				<th class="Tableth">시작시간(잔여좌석)</th>
-			</tr>
-		</table>
-
-
-		<table id="Tablecontent">
-
-		</table>
+	<div>
+		<div id="BigTable">
+			<table>
+				<tr align="center">
+					<th class="Tableth">영화관</th>
+					<th class="Tableth">영화 제목</th>
+					<th class="Tableth">시작시간(잔여좌석)</th>
+				</tr>
+			</table>
+			<table id="Tablecontent">
+			</table>
+		</div>
 	</div>
-</div>
 </body>
 
 </html>

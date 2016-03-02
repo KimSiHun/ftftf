@@ -18,6 +18,11 @@
 	margin: auto;
 	left: auto;
 }
+
+
+#cgvLogo {
+	margin-top: 150px;
+}
 </style>
 
 <title>Insert title here</title>
@@ -29,5 +34,11 @@
 	<div id="map" style="width: 95%; height: 350px; margin: auto;"></div>
 	<br>
 	<ul id="theaterNameUL"></ul>
+	<div>
+		<div>go to 
+			<a href="http://www.cgv.co.kr/ticket/"><img id="cgvLogo"
+				src="resources/images/cgv.png" alt="cgv"></a>
+		</div>
+	</div>
 </body>
 </html>
