@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style type="text/css">
 #theaterNameUL {
-	width: 280px;
+	width: 380px;
 	line-height: 2em;
 	list-style: none;
 	background-color: rgba(31, 0, 0, 0.7);
@@ -27,6 +27,7 @@
 	<hr>
 	<br>
 	<div id="map" style="width: 95%; height: 350px; margin: auto;"></div>
+	<br>
 	<ul id="theaterNameUL"></ul>
 </body>
 </html>
