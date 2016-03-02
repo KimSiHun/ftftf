@@ -240,7 +240,7 @@ $(document).ready(function() {
 	                                  }); 
 								},
 								error : function(xhr, stat, err) {
-							    	alert("error aaaa");
+							    	alert("error in images loading");
 							    	console.log(err);
 							    }
 							});
